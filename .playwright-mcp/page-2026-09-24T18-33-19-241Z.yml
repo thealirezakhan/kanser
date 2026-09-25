@@ -1,0 +1,65 @@
+- generic [active] [ref=f6e1]:
+  - main [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - heading "Run cf6d752f" [level=1] [ref=f6e4]
+      - generic [ref=f6e5]: completed
+    - generic [ref=f6e6]:
+      - heading "Agent timeline" [level=2] [ref=f6e7]
+      - list [ref=f6e8]:
+        - listitem [ref=f6e20]:
+          - code [ref=f6e21]: agent_step
+          - generic [ref=f6e22]: clinical · started
+        - listitem [ref=f6e23]:
+          - code [ref=f6e24]: agent_step
+          - generic [ref=f6e25]: clinical · completed · 0.55
+        - listitem [ref=f6e26]:
+          - code [ref=f6e27]: agent_step
+          - generic [ref=f6e28]: radiology · started
+        - listitem [ref=f6e29]:
+          - code [ref=f6e30]: agent_step
+          - generic [ref=f6e31]: radiology · completed · 0.7
+        - listitem [ref=f6e32]:
+          - code [ref=f6e33]: agent_step
+          - generic [ref=f6e34]: rag_evidence · pending
+        - listitem [ref=f6e35]:
+          - code [ref=f6e36]: evidence
+        - listitem [ref=f6e37]:
+          - code [ref=f6e38]: agent_step
+          - generic [ref=f6e39]: evidence_verify · completed
+        - listitem [ref=f6e40]:
+          - code [ref=f6e41]: agent_step
+          - generic [ref=f6e42]: consensus · completed
+        - listitem [ref=f6e43]:
+          - code [ref=f6e44]: agent_step
+          - generic [ref=f6e45]: self_critic · completed
+        - listitem [ref=f6e46]:
+          - code [ref=f6e47]: agent_step
+          - generic [ref=f6e48]: debate
+        - listitem [ref=f6e49]:
+          - code [ref=f6e50]: agent_step
+          - generic [ref=f6e51]: consensus · completed
+        - listitem [ref=f6e52]:
+          - code [ref=f6e53]: agent_step
+          - generic [ref=f6e54]: self_critic · completed
+        - listitem [ref=f6e55]:
+          - code [ref=f6e56]: agent_step
+          - generic [ref=f6e57]: explain · completed
+        - listitem [ref=f6e58]:
+          - code [ref=f6e59]: run_completed
+    - generic [ref=f6e60]:
+      - generic [ref=f6e61]:
+        - heading "Report" [level=2] [ref=f6e62]
+        - generic [ref=f6e63]:
+          - button "Clinician" [ref=f6e64]
+          - button "Patient" [ref=f6e65]
+      - paragraph [ref=f6e66]: Insufficient evidence - local fallback
+      - paragraph [ref=f6e67]: confidence 0.40
+      - paragraph [ref=f6e68]: Local fallback explanation. External LLM unavailable.
+      - heading "Warnings" [level=3] [ref=f6e69]
+      - list [ref=f6e70]:
+        - listitem [ref=f6e71]: external LLM unavailable; verdict unverified
+        - listitem [ref=f6e72]: external LLM unavailable; verdict unverified
+    - link "← Back to cases" [ref=f6e10] [cursor=pointer]:
+      - /url: /cases
+  - button "Open Next.js Dev Tools" [ref=f6e16] [cursor=pointer]
+  - alert [ref=f6e73]

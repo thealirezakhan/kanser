@@ -1,0 +1,55 @@
+[     293ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     325ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   74701ms] [WARNING] WebSocket connection to 'ws://localhost:8000/ws/runs/e522d7a4239f410697991d85d8b471b7?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc5MDMwMjc4NH0.reodXpFQg5kKmX7LvSCUBXpuXScgh1MTM9mFO-D2lfU' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/_next/static/chunks/_1-7nk5a._.js:1703
+[  134320ms] [ERROR] Failed to load resource: the server responded with a status of 429 (Too Many Requests) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  146362ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  146399ms] [LOG] [Fast Refresh] done in 27ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  146500ms] [LOG] [Fast Refresh] done in 27ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  146710ms] [LOG] [Fast Refresh] done in 27ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  161318ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  163600ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  163602ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  164417ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  165315ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  166323ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  167316ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  168317ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  169309ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  170326ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  171320ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  172318ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  173311ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  176134ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  176148ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  176308ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  177321ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  178325ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  179366ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  180311ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  181318ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  182314ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  183318ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  184309ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  185328ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  186322ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  187313ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  188319ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  189307ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  190318ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  191309ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  192305ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  193315ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  194317ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  195312ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  196328ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  197319ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  198327ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  199309ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  200317ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  201322ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  202309ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  203309ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  204322ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  205319ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  206321ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0
+[  207323ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/e522d7a4239f410697991d85d8b471b7:0

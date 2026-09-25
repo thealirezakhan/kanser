@@ -1,0 +1,52 @@
+- generic [active] [ref=f5e1]:
+  - button "Open Next.js Dev Tools" [ref=f5e31] [cursor=pointer]
+  - alert [ref=f5e35]
+  - main [ref=f5e49]:
+    - generic [ref=f5e50]:
+      - heading "Run cf6d752f" [level=1] [ref=f5e51]
+      - generic [ref=f5e52]: running
+    - generic [ref=f5e53]:
+      - heading "Agent timeline" [level=2] [ref=f5e54]
+      - list [ref=f5e55]:
+        - listitem [ref=f5e56]:
+          - code [ref=f5e57]: agent_step
+          - generic [ref=f5e58]: clinical · started
+        - listitem [ref=f5e59]:
+          - code [ref=f5e60]: agent_step
+          - generic [ref=f5e61]: clinical · completed · 0.55
+        - listitem [ref=f5e62]:
+          - code [ref=f5e63]: agent_step
+          - generic [ref=f5e64]: radiology · started
+        - listitem [ref=f5e65]:
+          - code [ref=f5e66]: agent_step
+          - generic [ref=f5e67]: radiology · completed · 0.7
+        - listitem [ref=f5e68]:
+          - code [ref=f5e69]: agent_step
+          - generic [ref=f5e70]: rag_evidence · pending
+        - listitem [ref=f5e71]:
+          - code [ref=f5e72]: evidence
+        - listitem [ref=f5e73]:
+          - code [ref=f5e74]: agent_step
+          - generic [ref=f5e75]: evidence_verify · completed
+        - listitem [ref=f5e76]:
+          - code [ref=f5e77]: agent_step
+          - generic [ref=f5e78]: consensus · completed
+        - listitem [ref=f5e79]:
+          - code [ref=f5e80]: agent_step
+          - generic [ref=f5e81]: self_critic · completed
+        - listitem [ref=f5e82]:
+          - code [ref=f5e83]: agent_step
+          - generic [ref=f5e84]: debate
+        - listitem [ref=f5e85]:
+          - code [ref=f5e86]: agent_step
+          - generic [ref=f5e87]: consensus · completed
+        - listitem [ref=f5e88]:
+          - code [ref=f5e89]: agent_step
+          - generic [ref=f5e90]: self_critic · completed
+        - listitem [ref=f5e91]:
+          - code [ref=f5e92]: agent_step
+          - generic [ref=f5e93]: explain · completed
+        - listitem [ref=f5e94]:
+          - code [ref=f5e95]: run_completed
+    - link "← Back to cases" [ref=f5e96] [cursor=pointer]:
+      - /url: /cases

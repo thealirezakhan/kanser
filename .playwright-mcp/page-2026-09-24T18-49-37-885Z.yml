@@ -1,0 +1,32 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e26]: Cases
+  - main [ref=e34]:
+    - heading "Cases" [level=1] [ref=e35]
+    - generic [ref=e36]:
+      - heading "New case" [level=2] [ref=e37]
+      - generic [ref=e38]:
+        - textbox "Patient reference (no real identifiers)" [ref=e39]
+        - textbox "Clinical notes" [ref=e40]
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - checkbox "ct" [checked] [ref=e43]
+            - text: ct
+          - generic [ref=e44]:
+            - checkbox "cxr" [ref=e45]
+            - text: cxr
+          - generic [ref=e46]:
+            - checkbox "pathology" [ref=e47]
+            - text: pathology
+          - generic [ref=e48]:
+            - checkbox "genomics" [ref=e49]
+            - text: genomics
+          - generic [ref=e50]:
+            - checkbox "labs" [ref=e51]
+            - text: labs
+          - generic [ref=e52]:
+            - checkbox "notes" [checked] [ref=e53]
+            - text: notes
+        - button "Create case" [ref=e54]
+    - generic [ref=e55]:
+      - heading "Existing (0)" [level=2] [ref=e56]
+      - paragraph [ref=e57]: No cases yet.

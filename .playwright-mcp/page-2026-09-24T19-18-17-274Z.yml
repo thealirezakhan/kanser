@@ -1,0 +1,12 @@
+- generic [active] [ref=f4e1]:
+  - alert [ref=f4e11]: Run 6b7b371b
+  - main [ref=f4e55]:
+    - generic [ref=f4e56]:
+      - heading "Run 6b7b371b" [level=1] [ref=f4e57]
+      - generic [ref=f4e58]: queued
+    - generic [ref=f4e59]:
+      - heading "Agent timeline" [level=2] [ref=f4e60]
+      - list [ref=f4e61]:
+        - listitem [ref=f4e62]: Waiting for events…
+    - link "← Back to cases" [ref=f4e63] [cursor=pointer]:
+      - /url: /cases

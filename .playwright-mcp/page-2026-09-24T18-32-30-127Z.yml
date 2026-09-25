@@ -1,0 +1,16 @@
+- generic [active] [ref=f5e1]:
+  - button "Open Next.js Dev Tools" [ref=f5e31] [cursor=pointer]
+  - alert [ref=f5e35]
+  - main [ref=f5e36]:
+    - generic [ref=f5e37]:
+      - heading "Case TEST-003" [level=1] [ref=f5e38]
+      - generic [ref=f5e39]:
+        - button "Preview routing" [ref=f5e40]
+        - button "Diagnose" [ref=f5e41]
+    - generic [ref=f5e42]:
+      - heading "Modalities" [level=2] [ref=f5e43]
+      - paragraph [ref=f5e44]: ct, notes
+      - heading "Clinical notes" [level=2] [ref=f5e45]
+      - paragraph [ref=f5e46]: Spiculated 2cm nodule RUL, 55yo smoker
+      - heading "Upload study file" [level=2] [ref=f5e47]
+      - button "Choose File" [ref=f5e48]

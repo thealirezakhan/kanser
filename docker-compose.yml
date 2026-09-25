@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: kanser
+      POSTGRES_PASSWORD: kanser
+      POSTGRES_DB: kanser
+    ports:
+      - "5433:5432"  # host 5433: native postgres already owns 5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kanser"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env  # GROQ_API_KEY etc.; `environment` below wins on conflict
+    environment:
+      DATABASE_URL: postgresql://kanser:kanser@postgres:5432/kanser
+      CORS_ORIGINS: http://localhost:3000
+      JWT_SECRET: change-me-32-bytes-min-in-prod
+      CHROMA_PATH: /app/data/chroma
+    volumes:
+      - ./backend/data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  web:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    depends_on:
+      - api
+
+volumes:
+  pgdata:

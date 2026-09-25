@@ -1,0 +1,76 @@
+- generic [active] [ref=f2e1]:
+  - alert [ref=f2e2]
+  - main [ref=f2e51]:
+    - generic [ref=f2e52]:
+      - heading "Run b2760ce4" [level=1] [ref=f2e53]
+      - generic [ref=f2e54]: completed
+    - generic [ref=f2e55]:
+      - heading "Agent timeline" [level=2] [ref=f2e56]
+      - list [ref=f2e57]:
+        - listitem [ref=f2e60]:
+          - code [ref=f2e61]: agent_step
+          - generic [ref=f2e62]: clinical · started
+        - listitem [ref=f2e63]:
+          - code [ref=f2e64]: agent_step
+          - generic [ref=f2e65]: clinical · completed · 0.55
+        - listitem [ref=f2e66]:
+          - code [ref=f2e67]: agent_step
+          - generic [ref=f2e68]: radiology · started
+        - listitem [ref=f2e69]:
+          - code [ref=f2e70]: agent_step
+          - generic [ref=f2e71]: radiology · completed · 0.7
+        - listitem [ref=f2e72]:
+          - code [ref=f2e73]: agent_step
+          - generic [ref=f2e74]: rag_evidence · completed · 5 hits
+        - listitem [ref=f2e75]:
+          - code [ref=f2e76]: evidence
+        - listitem [ref=f2e77]:
+          - code [ref=f2e78]: agent_step
+          - generic [ref=f2e79]: evidence_verify · completed
+        - listitem [ref=f2e80]:
+          - code [ref=f2e81]: agent_step
+          - generic [ref=f2e82]: consensus · completed
+        - listitem [ref=f2e83]:
+          - code [ref=f2e84]: agent_step
+          - generic [ref=f2e85]: self_critic · completed
+        - listitem [ref=f2e86]:
+          - code [ref=f2e87]: agent_step
+          - generic [ref=f2e88]: debate
+        - listitem [ref=f2e89]:
+          - code [ref=f2e90]: agent_step
+          - generic [ref=f2e91]: consensus · completed
+        - listitem [ref=f2e92]:
+          - code [ref=f2e93]: agent_step
+          - generic [ref=f2e94]: self_critic · completed
+        - listitem [ref=f2e95]:
+          - code [ref=f2e96]: agent_step
+          - generic [ref=f2e97]: explain · completed
+        - listitem [ref=f2e98]:
+          - code [ref=f2e99]: run_completed
+    - generic [ref=f2e100]:
+      - generic [ref=f2e101]:
+        - heading "Report" [level=2] [ref=f2e102]
+        - generic [ref=f2e103]:
+          - button "Clinician" [ref=f2e104]
+          - button "Patient" [ref=f2e105]
+      - paragraph [ref=f2e106]: Insufficient evidence - local fallback
+      - paragraph [ref=f2e107]: confidence 0.40
+      - paragraph [ref=f2e108]: Local fallback explanation. External LLM unavailable.
+      - heading "Warnings" [level=3] [ref=f2e109]
+      - list [ref=f2e110]:
+        - listitem [ref=f2e111]: external LLM unavailable; verdict unverified
+        - listitem [ref=f2e112]: external LLM unavailable; verdict unverified
+      - heading "Evidence" [level=3] [ref=f2e113]
+      - list [ref=f2e114]:
+        - listitem [ref=f2e115]: pmid:42657018 (2026)
+        - listitem [ref=f2e116]: pmid:42641667 (2026)
+        - listitem [ref=f2e117]: pmid:42709437 (2026)
+        - listitem [ref=f2e118]: pmid:42688024 (2026)
+        - listitem [ref=f2e119]: pmid:42779251 (2026)
+        - listitem [ref=f2e120]: pmid:42657018 (2026)
+        - listitem [ref=f2e121]: pmid:42641667 (2026)
+        - listitem [ref=f2e122]: pmid:42709437 (2026)
+        - listitem [ref=f2e123]: pmid:42688024 (2026)
+        - listitem [ref=f2e124]: pmid:42779251 (2026)
+    - link "← Back to cases" [ref=f2e59] [cursor=pointer]:
+      - /url: /cases

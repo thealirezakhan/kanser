@@ -1,0 +1,32 @@
+- generic [active] [ref=f5e1]:
+  - main [ref=f5e2]:
+    - heading "Cases" [level=1] [ref=f5e3]
+    - generic [ref=f5e4]:
+      - heading "New case" [level=2] [ref=f5e5]
+      - generic [ref=f5e6]:
+        - textbox "Patient reference (no real identifiers)" [ref=f5e7]
+        - textbox "Clinical notes" [ref=f5e8]
+        - generic [ref=f5e9]:
+          - generic [ref=f5e10]:
+            - checkbox "ct" [checked] [ref=f5e11]
+            - text: ct
+          - generic [ref=f5e12]:
+            - checkbox "cxr" [ref=f5e13]
+            - text: cxr
+          - generic [ref=f5e14]:
+            - checkbox "pathology" [ref=f5e15]
+            - text: pathology
+          - generic [ref=f5e16]:
+            - checkbox "genomics" [ref=f5e17]
+            - text: genomics
+          - generic [ref=f5e18]:
+            - checkbox "labs" [ref=f5e19]
+            - text: labs
+          - generic [ref=f5e20]:
+            - checkbox "notes" [checked] [ref=f5e21]
+            - text: notes
+        - button "Create case" [ref=f5e22]
+    - generic [ref=f5e23]:
+      - heading "Existing (0)" [level=2] [ref=f5e24]
+      - paragraph [ref=f5e25]: No cases yet.
+  - button "Open Next.js Dev Tools" [ref=f5e31] [cursor=pointer]

@@ -1,0 +1,12 @@
+- generic [active] [ref=f6e1]:
+  - main [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - heading "Run cf6d752f" [level=1] [ref=f6e4]
+      - generic [ref=f6e5]: queued
+    - generic [ref=f6e6]:
+      - heading "Agent timeline" [level=2] [ref=f6e7]
+      - list [ref=f6e8]:
+        - listitem [ref=f6e9]: Waiting for events…
+    - link "← Back to cases" [ref=f6e10] [cursor=pointer]:
+      - /url: /cases
+  - button "Open Next.js Dev Tools" [ref=f6e16] [cursor=pointer]
