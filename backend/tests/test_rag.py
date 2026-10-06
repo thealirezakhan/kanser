@@ -199,7 +199,7 @@ def test_diagnose_run_uses_default_rag_and_cites(tmp_path, monkeypatch):
         clinical_notes="spiculated nodule",
     )
     run_store.create("phase5-run")
-    asyncio.run(_execute_run("phase5-run", case))
+    asyncio.run(_execute_run("phase5-run", "case-1", case))
 
     snap = run_store.get("phase5-run")
     assert snap["status"] == "completed"

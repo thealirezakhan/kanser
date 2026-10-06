@@ -18,17 +18,28 @@ node_modules/
 frontend/.next/
 frontend/out/
 
-# Data (never commit medical data)
+# Runtime data (uploads, audit trail, vector store) — never commit medical data
+backend/data/
 data/raw/
+data/audit/
 *.dcm
 *.dicom
 *.svs
 *.nii*
 *.parquet
 
-# Vector stores
+# Vector stores (contain corpus text)
 chroma_db/
 *.lance
+
+# Logs
+*.log
+
+# Root screenshots (proof shots, not shipped assets)
+/*.png
+
+# Playwright captures (may contain PHI from live runs)
+.playwright-mcp/
 
 # OS / IDE
 .DS_Store

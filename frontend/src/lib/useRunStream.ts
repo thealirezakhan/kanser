@@ -46,7 +46,11 @@ export function useRunStream(runId: string) {
     const token = getToken();
     if (token) {
       try {
-        ws = new WebSocket(wsUrl(`/ws/runs/${runId}?token=${token}`));
+        ws = new WebSocket(wsUrl(`/ws/runs/${runId}`));
+        ws.onopen = () => {
+          // token rides first message, never the URL (keeps access logs clean)
+          ws?.send(JSON.stringify({ type: "auth", token }));
+        };
         ws.onmessage = (msg) => {
           const ev = JSON.parse(msg.data) as RunEvent;
           setStatus(

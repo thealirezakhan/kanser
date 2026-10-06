@@ -16,6 +16,28 @@ def test_sha256_matches_hashlib():
     assert sha256_bytes(data) == hashlib.sha256(data).hexdigest()
 
 
+def test_default_jwt_secret_refused(monkeypatch):
+    from app.auth import assert_strong_secret
+
+    monkeypatch.delenv("DISABLE_AUTH", raising=False)
+    monkeypatch.setenv("JWT_SECRET", "change-me-32-bytes-min-in-prod")
+    with pytest.raises(RuntimeError, match="JWT_SECRET"):
+        assert_strong_secret()
+    monkeypatch.setenv("JWT_SECRET", "short")
+    with pytest.raises(RuntimeError, match="JWT_SECRET"):
+        assert_strong_secret()
+    monkeypatch.setenv("JWT_SECRET", "a" * 32)
+    assert_strong_secret()  # strong secret passes
+
+
+def test_default_secret_ok_when_auth_disabled(monkeypatch):
+    from app.auth import assert_strong_secret
+
+    monkeypatch.setenv("DISABLE_AUTH", "1")
+    monkeypatch.setenv("JWT_SECRET", "change-me-32-bytes-min")
+    assert_strong_secret()
+
+
 def test_aes256_roundtrip_and_wrong_key():
     from app.security import aes_decrypt, aes_encrypt
 
@@ -96,7 +118,8 @@ def test_ingest_sha256_and_tamper_detect(tmp_path, monkeypatch):
     assert data["sha256"] == hashlib.sha256(content).hexdigest()
     assert ".." not in data["filename"]
 
-    stored = next(p for p in tmp_path.iterdir() if not p.name.endswith(".sha256"))
+    stored = tmp_path / data["stored_as"]
+    assert stored.exists()
     assert verify_integrity(stored, data["sha256"]) is True
     stored.write_bytes(b"TAMPERED")
     assert verify_integrity(stored, data["sha256"]) is False

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "tertiary-container": "#00855d",
+        "on-error": "#ffffff",
+        "secondary-fixed-dim": "#b4c5ff",
+        "surface": "#f8f9ff",
+        "on-secondary-container": "#fefcff",
+        "on-tertiary-fixed": "#002114",
+        "surface-container": "#f1f5f9",
+        "surface-container-lowest": "#ffffff",
+        "outline": "#64748b",
+        "primary": "#006194",
+        "inverse-on-surface": "#eaf1ff",
+        "inverse-primary": "#93ccff",
+        "on-secondary-fixed-variant": "#003ea8",
+        "tertiary": "#006948",
+        "on-tertiary-container": "#f5fff7",
+        "on-background": "#0b1c30",
+        "error-container": "#fee2e2",
+        "primary-container": "#0284c7",
+        "on-tertiary-fixed-variant": "#005137",
+        "on-surface": "#0f172a",
+        "on-tertiary": "#ffffff",
+        "tertiary-fixed": "#85f8c4",
+        "surface-dim": "#e2e8f0",
+        "tertiary-fixed-dim": "#68dba9",
+        "surface-container-high": "#e2e8f0",
+        "on-secondary-fixed": "#00174b",
+        "on-secondary": "#ffffff",
+        "outline-variant": "#cbd5e1",
+        "primary-fixed-dim": "#93ccff",
+        "on-error-container": "#991b1b",
+        "on-primary-fixed": "#001d31",
+        "inverse-surface": "#213145",
+        "secondary-fixed": "#dbe1ff",
+        "primary-fixed": "#cce5ff",
+        "surface-tint": "#006398",
+        "secondary-container": "#0284c7",
+        "on-primary-container": "#ffffff",
+        "surface-variant": "#f1f5f9",
+        "on-primary": "#ffffff",
+        "background": "#f8fafc",
+        "surface-bright": "#f8f9ff",
+        "surface-container-low": "#ffffff",
+        "on-primary-fixed-variant": "#004b73",
+        "on-surface-variant": "#475569",
+        "error": "#dc2626",
+        "surface-container-highest": "#cbd5e1",
+        "secondary": "#0284c7"
+      },
+      "fontFamily": {
+        "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+        "body-lg": ["Inter", "sans-serif"],
+        "title-md": ["Inter", "sans-serif"],
+        "label-md": ["Inter", "sans-serif"],
+        "headline-xl": ["Plus Jakarta Sans", "sans-serif"],
+        "body-sm": ["Inter", "sans-serif"],
+        "display-lg": ["Plus Jakarta Sans", "sans-serif"],
+        "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+        "label-sm": ["Inter", "sans-serif"],
+        "body-md": ["Inter", "sans-serif"],
+        "code-sm": ["JetBrains Mono", "monospace"]
+      }
+    }
+  }
+};</script></head><body class="bg-[#f8fafc] font-body-md text-slate-900 antialiased selection:bg-sky-100 selection:text-sky-900 min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-white border-r border-slate-200 z-50 flex flex-col justify-between shadow-sm"><div class="flex flex-col"><div class="h-16 px-4 flex items-center justify-between border-b border-slate-200 bg-white"><div class="flex items-center gap-2"><img alt="KANser Clinical Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wo0oRPPVLn7g5x0KjlBqBJDIYrKEsbpKo1P5HmnmY1N61y-YeVMjJdY1aPy8FedCHfn_ro3kfZgVfjbXXWK23SIkf7hc856Lbk1zmOQQF18KnjSbHf6xZsk6U1q5AO80NCzhQ8JqcRqGuRUw1ODayK7d2XLQyal0OXQ6IQqzJBGE8cX1_4iVZck5ggsPANufjFTLFD10o882xyUM0LIA991Ltw3wEyMAo-jyI9yFgLcn1bxNH9Z074Jw"/><div class="flex flex-col"><span class="font-mono text-xs tracking-wider font-bold text-slate-900 uppercase">KANser</span><span class="font-mono text-[10px] text-slate-500 font-medium">CLINICAL AI</span></div></div><span class="px-1.5 py-0.5 rounded bg-sky-50 text-sky-700 font-mono text-[11px] font-semibold border border-sky-200">v2.4-agentic</span></div><div class="px-3 py-3"><div class="px-2 py-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400">Multimodal Navigation</div><nav class="mt-1 flex flex-col gap-0.5" data-active-classes="bg-sky-50 text-sky-700 font-semibold border border-sky-100"><a class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all" data-path="command-center" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="text-sm">Command Center</span></div><span class="font-mono text-[11px] text-slate-400">/</span></a><a aria-current="page" class="flex items-center justify-between px-3 py-2 rounded-lg transition-all bg-sky-50 text-sky-700 font-semibold border border-sky-200/70" data-path="cases" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px] text-sky-600">folder_shared</span><span class="text-sm">Cases</span></div><span class="font-mono text-[10px] text-sky-600 bg-sky-100/70 px-1.5 py-0.5 rounded">queue</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all" data-path="live-agent-swarm" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">hub</span><span class="text-sm">Live Agent Swarm</span></div><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all" data-path="tumor-board" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">groups_3</span><span class="text-sm">Tumor Board</span></div><span class="font-mono text-[11px] text-slate-400">sync</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all" data-path="evidence-and-literature" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="text-sm">Evidence &amp; Literature</span></div><span class="font-mono text-[11px] text-slate-400">PubMed</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all" data-path="longitudinal-intelligence" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">monitoring</span><span class="text-sm">Longitudinal Intel</span></div><span class="font-mono text-[11px] text-slate-400">3-yr</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all" data-path="attention-and-alerts" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">warning</span><span class="text-sm">Attention &amp; Alerts</span></div><span class="px-1.5 py-0.5 rounded-full bg-rose-100 text-rose-700 font-mono text-[10px] font-bold">3</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-all" data-path="administration" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[18px]">settings</span><span class="text-sm">Administration</span></div><span class="font-mono text-[11px] text-slate-400">sys</span></a></nav></div></div><div class="p-3 flex flex-col gap-2 border-t border-slate-200 bg-slate-50/70"><div class="p-2.5 rounded-lg bg-white border border-slate-200 shadow-xs"><div class="flex items-center justify-between"><span class="font-mono text-[10px] uppercase tracking-wider text-slate-400 font-semibold">Agent Mesh</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span><span class="font-mono text-[11px] text-emerald-600 font-semibold">42ms</span></div></div><div class="mt-1 font-mono text-[11px] text-slate-500 truncate">FastAPI ● VectorStore ● LangGraph</div></div><div class="p-2 rounded-lg bg-white border border-slate-200 shadow-xs flex items-center justify-between"><div class="flex items-center gap-2.5"><div class="w-8 h-8 rounded-full bg-sky-600 flex items-center justify-center font-mono text-xs font-bold text-white shadow-xs">SM</div><div class="flex flex-col min-w-0"><span class="text-xs font-semibold text-slate-900 truncate">Dr. Sarah Mitchell</span><span class="text-[11px] text-slate-500 truncate">Thoracic Oncology</span></div></div><span class="font-mono text-[10px] font-bold text-sky-700 px-1.5 py-0.5 rounded bg-sky-50 border border-sky-200">MD</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-white/95 backdrop-blur border-b border-slate-200 z-40 flex items-center justify-between px-6 shadow-xs"><div class="flex items-center gap-3 text-slate-500"><span class="material-symbols-outlined text-sky-600 text-[20px]">account_tree</span><div class="flex items-center gap-1.5 font-mono text-xs"><span class="text-slate-500 hover:text-slate-800 transition-colors cursor-pointer">KANser</span><span class="text-slate-400">/</span><span class="text-slate-500 hover:text-slate-800 transition-colors cursor-pointer">Cases</span><span class="text-slate-400">/</span><span class="text-slate-900 font-bold">DEMO-001</span><span class="text-slate-400">/</span><span class="text-sky-700 font-medium">Agent Swarm</span></div></div><div class="flex-1 max-w-xl mx-6"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-slate-400 text-[18px]">search</span><input class="w-full h-9 pl-9 pr-14 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:bg-white transition-all" placeholder="Search patient, case, evidence, run, biomarker..." type="text"/><div class="absolute right-2 flex items-center gap-0.5 px-1.5 py-0.5 rounded border border-slate-200 bg-white text-slate-400 font-mono text-[10px]"><span>⌘</span><span>K</span></div></div></div><div class="flex items-center gap-3"><div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded-lg bg-slate-50 border border-slate-200 text-xs font-mono"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span><span class="text-slate-600">Mesh: 12 Nodes</span></div><span class="text-slate-300">|</span><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span><span class="text-slate-600">TLS 1.3 / PHI Scrubbed</span></div></div><button class="relative p-2 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-600 transition-colors"><span class="material-symbols-outlined text-[19px]">notifications</span><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-rose-600 text-white font-mono text-[10px] flex items-center justify-center font-bold">3</span></button><div class="flex items-center gap-2 pl-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-sky-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbwWdB4kc5rAGEdZg-pAFni2bIa1Z1oOoAVj2TRcTKk1tRWzcHq3C--j88ZDuGJsa7EvNJdlYgKVTXBA24G2_bOFLoDXwAGQVTM8yoMNLje9gEQ6DMuPHmOEsMAzIOO1duVX9FpFe13CYQ0k92ut5ZWvlAPmNiSS_STbfkeeURho1IIOIZqLJM_Niw8LVNWiwi5KWurU7EG3lgDxzufLftQwfzXTaR9tSSWBp6Yg2_KYihQvUduPOw"/><div class="hidden 2xl:flex flex-col"><span class="text-xs font-semibold text-slate-800 leading-tight">Dr. Sarah Mitchell</span><span class="text-[11px] text-slate-400 leading-tight">Pulmonology</span></div></div></div></header><main class="relative pt-16 bg-[#f8fafc] min-h-screen"><div class="w-full p-6"><div class="flex flex-col w-full gap-5">
+<!-- 1. PATIENT CLINICAL HEADER -->
+<section class="bg-white border border-slate-200 rounded-xl p-5 flex flex-col gap-3 shadow-xs">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="font-mono text-sm font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">DEMO-001</span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+<span class="text-sm font-medium text-slate-700">55-year-old Male</span>
+<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+<span class="font-mono text-xs text-slate-600 uppercase tracking-wider bg-slate-100 px-2 py-0.5 rounded border border-slate-200">Active Surveillance &amp; Diagnostic Workup</span>
+<span class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-mono text-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+            Multimodal Reasoning Completed
+          </span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-mono text-xs uppercase tracking-wider text-slate-400 font-semibold">Primary Finding:</span>
+<span class="font-headline-md text-lg text-slate-900 font-bold tracking-tight">2.1 cm Spiculated Right Upper Lobe Solid Nodule</span>
+<span class="font-mono text-xs text-rose-700 font-semibold px-2 py-0.5 rounded bg-rose-50 border border-rose-200">Lung-RADS 4X</span>
+</div>
+</div>
+<!-- View Switcher & Action Bar -->
+<div class="flex flex-wrap items-center gap-2 self-start xl:self-auto">
+<!-- View Mode Switcher -->
+<div class="flex items-center bg-slate-100 p-1 rounded-lg border border-slate-200">
+<button class="px-2.5 py-1 rounded font-mono text-xs uppercase tracking-wider bg-white text-sky-700 font-bold shadow-xs border border-slate-200 transition-all" id="view-tech-btn">
+            Clinician Technical
+          </button>
+<button class="px-2.5 py-1 rounded font-mono text-xs uppercase tracking-wider text-slate-500 hover:text-slate-900 transition-all" id="view-plain-btn">
+            Patient Plain-Language
+          </button>
+</div>
+<div class="h-6 w-px bg-slate-200 hidden sm:block"></div>
+<div class="flex flex-wrap items-center gap-1.5">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px] text-rose-600">flag</span>
+            Challenge AI
+          </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px] text-sky-600">event</span>
+            Schedule Board
+          </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium transition-colors shadow-xs">
+<span class="material-symbols-outlined text-[16px] text-slate-500">print</span>
+            Brief
+          </button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold transition-all shadow-xs">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+            Approve Consensus
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. SUB-NAVIGATION TABS -->
+<nav class="flex items-center gap-1 overflow-x-auto pb-1 bg-white border border-slate-200 p-1.5 rounded-xl shadow-xs">
+<button class="px-3.5 py-2 rounded-lg bg-sky-600 text-white font-mono text-xs font-semibold whitespace-nowrap shadow-xs">
+      Overview (Active)
+    </button>
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-mono text-xs whitespace-nowrap transition-colors flex items-center gap-1.5">
+      Multimodal Evidence
+      <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-mono text-xs whitespace-nowrap transition-colors">
+      DICOM Imaging (CT)
+    </button>
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-mono text-xs whitespace-nowrap transition-colors flex items-center gap-1.5">
+      Pathology
+      <span class="font-mono text-[10px] text-rose-700 font-semibold bg-rose-50 border border-rose-200 px-1 rounded">Awaiting</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-mono text-xs whitespace-nowrap transition-colors">
+      Clinical &amp; Labs
+    </button>
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-mono text-xs whitespace-nowrap transition-colors">
+      Molecular Profile
+    </button>
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-mono text-xs whitespace-nowrap transition-colors">
+      Longitudinal Timeline
+    </button>
+<button class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-mono text-xs whitespace-nowrap transition-colors">
+      Audit Trail
+    </button>
+</nav>
+<!-- 3. MAIN COCKPIT GRID (Two balanced clinical columns) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+<!-- LEFT COLUMN: Integrated PACS DICOM Viewer & Evidence Constellation -->
+<div class="lg:col-span-6 xl:col-span-6 flex flex-col gap-5">
+<!-- DICOM CT Viewer Component -->
+<div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs flex flex-col">
+<!-- Telemetry Viewer Header -->
+<div class="bg-slate-50 border-b border-slate-200 px-4 py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2 font-mono text-xs">
+<span class="material-symbols-outlined text-[17px] text-sky-600">view_in_ar</span>
+<span class="text-slate-900 font-semibold">CT Chest Axial Window</span>
+<span class="text-slate-300">|</span>
+<span class="text-sky-700 font-medium">Slice 134 / 286</span>
+<span class="text-slate-300">|</span>
+<span class="text-slate-500 font-medium">L: -600 W: 1500 (Lung)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono text-[11px] text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">DICOM 3.0</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+</div>
+<!-- DICOM Canvas Viewport (Authentic Radiographic CT Viewport) -->
+<div class="relative w-full aspect-square bg-[#040911] overflow-hidden flex items-center justify-center select-none">
+<!-- Background Synthetic CT Scan Representation -->
+<img class="absolute inset-0 w-full h-full object-cover opacity-85 contrast-125 filter" data-alt="High-resolution axial medical chest computed tomography (CT) scan displaying lung parenchyma with dark pulmonary spaces, anatomical vascular branching, mediastinum structures, and a 2.1 centimeter solitary pulmonary nodule located in the right upper lobe, clinical diagnostic imaging style with subtle luminescent cyan annotations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX3-i5oLMFy3xwyorJSE_ZS5lR6OiymegvFB6BO0HB5yPHzEIlyutEsYoaJWOx7boYa_NTs08dPDiRBBiTh9nJWzH-3C6hHxIvgizp-9IiulB19ZG4e9mSJZuMA4A0xxysJWqkRgVq6kBN5JyEJkdDGQjyBScIGzskcHtufEAuQSaIjqKmWQ0lkSRimLkLGj7xBuamXFyv62SSdOs1WMfD0O-eGlmaSG6-lUpFYFKtkVRQy-1lr613"/>
+<!-- Overlaid Target Segmentation & Bounding Box Coordinates -->
+<div class="absolute inset-0 pointer-events-none p-4 flex flex-col justify-between">
+<div class="flex justify-between font-mono text-[11px] text-slate-300">
+<span class="bg-black/60 px-1.5 py-0.5 rounded border border-white/10">R (RIGHT)</span>
+<span class="bg-black/60 px-1.5 py-0.5 rounded border border-white/10">A (ANTERIOR)</span>
+<span class="bg-black/60 px-1.5 py-0.5 rounded border border-white/10">L (LEFT)</span>
+</div>
+<!-- Target Lesion Overlay (Centered on RUL nodule) -->
+<div class="relative w-full h-full flex items-center justify-center">
+<div class="relative w-44 h-44 -translate-x-12 -translate-y-8 pointer-events-auto group cursor-crosshair">
+<!-- Outer Bounding Technical Reticle -->
+<div class="absolute inset-0 rounded-lg bg-sky-400/10 shadow-[0_0_16px_rgba(2,132,199,0.4)] animate-pulse border border-sky-400/40"></div>
+<!-- Corner Ticks -->
+<div class="absolute -top-1 -left-1 w-3 h-3 bg-sky-400"></div>
+<div class="absolute -top-1 -right-1 w-3 h-3 bg-sky-400"></div>
+<div class="absolute -bottom-1 -left-1 w-3 h-3 bg-sky-400"></div>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 bg-sky-400"></div>
+<!-- Spiculated Contour Synthetic Vector -->
+<svg class="absolute inset-0 w-full h-full text-sky-400" fill="none" viewbox="0 0 100 100">
+<path d="M48 22 L55 25 L65 18 L68 28 L82 32 L78 44 L90 52 L78 62 L82 72 L70 75 L62 86 L50 80 L38 88 L34 76 L20 72 L26 58 L14 48 L25 40 L22 28 L36 30 Z" fill="currentColor" fill-opacity="0.18" stroke="currentColor" stroke-dasharray="2 1" stroke-width="1.5"></path>
+<!-- Measurement Caliper Crosshair -->
+<line stroke="currentColor" stroke-dasharray="1 1" stroke-width="1" x1="26" x2="82" y1="58" y2="32"></line>
+<circle cx="54" cy="45" fill="currentColor" r="2.5"></circle>
+</svg>
+<!-- Caliper Callout Floating Tag -->
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-900/90 border border-sky-400/60 text-sky-300 px-2 py-0.5 rounded shadow text-xs font-mono whitespace-nowrap">
+                  21.4 mm × 18.2 mm
+                </div>
+</div>
+</div>
+<div class="flex justify-between font-mono text-[11px] text-slate-300 items-end">
+<span class="bg-black/60 px-1.5 py-0.5 rounded border border-white/10">FOV: 320mm</span>
+<span class="bg-black/60 px-1.5 py-0.5 rounded border border-white/10">P (POSTERIOR)</span>
+<span class="bg-black/60 px-1.5 py-0.5 rounded border border-white/10">Thk: 1.25mm</span>
+</div>
+</div>
+<!-- Live Agent Overlay Chip -->
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-lg border border-slate-200 shadow-sm text-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
+<span class="font-semibold text-sky-800">Radiology Agent</span>
+<span class="text-slate-300">●</span>
+<span class="text-slate-700 font-medium">Confidence 87%</span>
+</div>
+<span class="text-slate-500 font-mono text-[11px]">Spiculated corona radiata detected</span>
+</div>
+</div>
+<!-- On-Screen DICOM Tool Controls -->
+<div class="bg-white border-t border-slate-200 px-4 py-2.5 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition-colors shadow-xs" title="Zoom">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="p-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition-colors shadow-xs" title="Pan">
+<span class="material-symbols-outlined text-[18px]">pan_tool</span>
+</button>
+<button class="p-1.5 rounded-lg border border-sky-300 bg-sky-50 hover:bg-sky-100 text-sky-700 transition-colors shadow-xs" title="Calipers">
+<span class="material-symbols-outlined text-[18px]">square_foot</span>
+</button>
+<button class="p-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition-colors shadow-xs" title="Invert">
+<span class="material-symbols-outlined text-[18px]">invert_colors</span>
+</button>
+</div>
+<!-- Window Preset Tabs -->
+<div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200">
+<span class="font-mono text-xs text-slate-500 px-2 font-medium">Window:</span>
+<button class="px-2 py-0.5 rounded font-mono text-xs bg-white text-sky-700 font-bold shadow-xs border border-slate-200">Lung</button>
+<button class="px-2 py-0.5 rounded font-mono text-xs text-slate-600 hover:text-slate-900">Mediastinal</button>
+<button class="px-2 py-0.5 rounded font-mono text-xs text-slate-600 hover:text-slate-900">Bone</button>
+</div>
+<!-- AI Heatmap & Contour Toggle -->
+<div class="flex items-center gap-2">
+<span class="font-mono text-xs text-slate-500 font-medium">AI Contour:</span>
+<button class="w-8 h-4 rounded-full bg-sky-600 p-0.5 flex items-center justify-end transition-all" id="toggle-contour">
+<span class="w-3 h-3 rounded-full bg-white shadow-xs"></span>
+</button>
+</div>
+</div>
+</div>
+<!-- Multimodal Evidence Constellation Visualizer -->
+<div class="bg-white border border-slate-200 rounded-xl p-5 shadow-xs flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sky-600 text-[20px]">hub</span>
+<h3 class="font-headline-sm text-sm font-bold text-slate-900 uppercase tracking-wider">Multimodal Evidence Constellation</h3>
+</div>
+<span class="font-mono text-xs text-slate-400">Knowledge Graph Synced</span>
+</div>
+<!-- Node Graph Visualization Card -->
+<div class="relative bg-slate-50 border border-slate-200 rounded-xl p-4 overflow-hidden">
+<!-- Graph Link Lines SVG -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none text-slate-300" fill="none" viewbox="0 0 500 240">
+<path class="text-sky-500" d="M 250 120 L 100 50" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path class="text-sky-500" d="M 250 120 L 90 190" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path class="text-sky-500" d="M 250 120 L 400 45" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path class="text-rose-400" d="M 250 120 L 410 135" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1.5"></path>
+<path class="text-slate-400" d="M 250 120 L 370 205" stroke="currentColor" stroke-dasharray="2 4" stroke-width="1.5"></path>
+</svg>
+<!-- Nodes Layout Container -->
+<div class="relative z-10 grid grid-cols-5 grid-rows-3 gap-2 h-56 items-center">
+<!-- Node: Imaging (CT 2026) -->
+<div class="col-start-1 col-span-2 row-start-1 bg-white border border-slate-200 p-2.5 rounded-lg shadow-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-sky-500"></span>
+<div class="flex flex-col">
+<span class="font-mono text-xs font-bold text-slate-800">Imaging (CT Chest)</span>
+<span class="text-xs text-slate-500">Segmented 2.1cm RUL</span>
+</div>
+</div>
+<span class="font-mono text-[11px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded font-bold">✓ Active</span>
+</div>
+<!-- Central Patient Node -->
+<div class="col-start-3 row-start-2 justify-self-center flex flex-col items-center">
+<div class="w-14 h-14 rounded-full bg-sky-100 border-2 border-sky-300 flex items-center justify-center shadow-xs">
+<div class="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-sky-600 text-[20px]">person</span>
+</div>
+</div>
+<span class="font-mono text-xs font-bold text-slate-800 mt-1">DEMO-001</span>
+</div>
+<!-- Node: Labs -->
+<div class="col-start-4 col-span-2 row-start-1 bg-white border border-slate-200 p-2.5 rounded-lg shadow-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-sky-500"></span>
+<div class="flex flex-col">
+<span class="font-mono text-xs font-bold text-slate-800">Serum Labs</span>
+<span class="text-xs text-slate-500">CEA: 4.2 ng/mL (Elev)</span>
+</div>
+</div>
+<span class="font-mono text-[11px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded font-bold">✓ Synced</span>
+</div>
+<!-- Node: Clinical Notes -->
+<div class="col-start-1 col-span-2 row-start-3 bg-white border border-slate-200 p-2.5 rounded-lg shadow-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-sky-600"></span>
+<div class="flex flex-col">
+<span class="font-mono text-xs font-bold text-slate-800">Clinical EHR</span>
+<span class="text-xs text-slate-500">35 pk-yr; Cough 2mo</span>
+</div>
+</div>
+<span class="font-mono text-[11px] text-sky-700 bg-sky-50 border border-sky-200 px-1.5 py-0.5 rounded font-bold">✓ Parsed</span>
+</div>
+<!-- Node: Histopathology (MISSING / REQUIRED) -->
+<div class="col-start-4 col-span-2 row-start-2 bg-rose-50/80 border border-rose-200 p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+<div class="flex flex-col">
+<span class="font-mono text-xs font-bold text-rose-800">Histopathology</span>
+<span class="text-xs text-slate-600">Tissue Specimen</span>
+</div>
+</div>
+<span class="font-mono text-[11px] text-rose-700 font-bold px-1.5 py-0.5 rounded bg-rose-100 border border-rose-200">⊘ REQUIRED</span>
+</div>
+<!-- Node: Molecular / NGS (UNAVAILABLE) -->
+<div class="col-start-4 col-span-2 row-start-3 bg-slate-100/70 border border-slate-200 p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-slate-400"></span>
+<div class="flex flex-col">
+<span class="font-mono text-xs font-semibold text-slate-700">Molecular / NGS</span>
+<span class="text-xs text-slate-500">EGFR / ALK Panel</span>
+</div>
+</div>
+<span class="font-mono text-[11px] text-slate-500 px-1.5 py-0.5 rounded bg-slate-200/70 border border-slate-300">⊘ PENDING</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-slate-500 font-mono text-xs px-1">
+<span>Completeness: 3 of 5 Modalities Present</span>
+<span class="text-sky-700 font-semibold">Multimodal Alignment Index: 0.88</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Clinical Intelligence & Reasoning Breakdown -->
+<div class="lg:col-span-6 xl:col-span-6 flex flex-col gap-5">
+<!-- Multi-Agent Consensus Summary Card -->
+<div class="bg-white border border-slate-200 rounded-xl p-5 shadow-xs flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sky-600 text-[20px]">psychology</span>
+<h3 class="font-headline-sm text-sm font-bold text-slate-900 uppercase tracking-wider">Multi-Agent Consensus Engine</h3>
+</div>
+<span class="font-mono text-xs text-sky-700 font-semibold bg-sky-50 border border-sky-200 px-2 py-0.5 rounded">Bayesian Weighted</span>
+</div>
+<!-- Consensus Diagnosis Banner -->
+<div class="bg-slate-50 border border-slate-200 p-4 rounded-xl flex flex-col gap-3">
+<div class="flex items-start justify-between gap-3">
+<div>
+<span class="font-mono text-xs uppercase tracking-wider text-slate-400 font-semibold">Consensus Primary Working Diagnosis</span>
+<div class="font-headline-md text-base sm:text-lg text-slate-900 font-bold mt-0.5">
+                Suspicious Malignant Pulmonary Neoplasm
+              </div>
+<div class="font-mono text-xs text-slate-500 mt-1">
+                Staging Hypothesis: <span class="text-slate-900 font-bold bg-white px-1.5 py-0.5 rounded border border-slate-200">cT1c cN0 cM0</span> (AJCC 8th Ed.)
+              </div>
+</div>
+<!-- Clean Clinical 81% Gauge Score -->
+<div class="flex flex-col items-center bg-sky-50 border border-sky-200 px-4 py-2 rounded-xl shadow-xs">
+<span class="font-headline-xl text-3xl font-extrabold text-sky-700 tracking-tight">81%</span>
+<span class="font-mono text-[10px] text-sky-800 uppercase font-semibold">Weighted Conf.</span>
+</div>
+</div>
+<!-- Micro Trajectory Meter & Agent Convergence -->
+<div class="mt-1 flex flex-col gap-1.5 bg-white border border-slate-200 p-3 rounded-lg">
+<div class="flex items-center justify-between font-mono text-xs">
+<span class="text-slate-500 font-medium">Agent Trajectory Convergence:</span>
+<span class="text-slate-700 font-semibold">Convergence delta: ±4.2%</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 rounded-full bg-slate-100 border border-slate-200 overflow-hidden flex">
+<div class="bg-sky-600 h-full rounded-l-full" style="width: 81%"></div>
+<div class="bg-slate-200 h-full" style="width: 19%"></div>
+</div>
+<div class="flex justify-between font-mono text-[11px] text-slate-500">
+<span class="text-sky-700 font-medium">Radiology (87%)</span>
+<span class="text-slate-700 font-medium">Evidence (79%)</span>
+<span class="text-slate-600">Clinical Risk (74%)</span>
+<span class="text-sky-800 font-bold">Consensus 81%</span>
+</div>
+</div>
+</div>
+<!-- Decision Factor Attribution Breakdown -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs uppercase tracking-wider text-slate-500 font-semibold">Decision Factor Attribution Breakdown</span>
+<span class="font-mono text-[11px] text-slate-400">Shapley / LIME</span>
+</div>
+<div class="space-y-1.5 mt-1 text-xs">
+<!-- Factor 1 -->
+<div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sky-600 text-[18px]">radiology</span>
+<span class="text-slate-800 font-medium">Imaging morphological indicators (Corona radiata, size &gt; 2cm)</span>
+</div>
+<span class="font-mono font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">+38%</span>
+</div>
+<!-- Factor 2 -->
+<div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sky-600 text-[18px]">clinical_notes</span>
+<span class="text-slate-800 font-medium">Clinical risk profile (55yo male, 35 pack-year tobacco, persistent cough)</span>
+</div>
+<span class="font-mono font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">+22%</span>
+</div>
+<!-- Factor 3 -->
+<div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sky-600 text-[18px]">menu_book</span>
+<span class="text-slate-800 font-medium">Verified peer-reviewed literature match (Brock Model concordance)</span>
+</div>
+<span class="font-mono font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">+21%</span>
+</div>
+<!-- Negative Factor 1 -->
+<div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-600 text-[18px]">biotech</span>
+<span class="text-slate-600">Absence of tissue histopathology &amp; cytopathology</span>
+</div>
+<span class="font-mono font-bold text-rose-700 bg-rose-50 border border-rose-200 px-2 py-0.5 rounded">-12%</span>
+</div>
+<!-- Negative Factor 2 -->
+<div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-600 text-[18px]">help_outline</span>
+<span class="text-slate-600">Retained alternative diagnosis (Tuberculous Granuloma / Hamartoma)</span>
+</div>
+<span class="font-mono font-bold text-rose-700 bg-rose-50 border border-rose-200 px-2 py-0.5 rounded">-8%</span>
+</div>
+</div>
+</div>
+<!-- What Would Resolve Clinical Uncertainty? -->
+<div class="bg-slate-50 border border-slate-200 p-4 rounded-xl flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-amber-500 text-[20px]">lightbulb</span>
+<span class="font-headline-sm text-sm text-slate-900 font-bold">What Would Resolve Clinical Uncertainty?</span>
+</div>
+<span class="font-mono text-[11px] text-slate-400 uppercase font-semibold">Next-Best-Actions</span>
+</div>
+<div class="grid grid-cols-1 gap-2 mt-1">
+<!-- Rec 1 -->
+<div class="bg-white hover:border-sky-300 border border-slate-200 p-3 rounded-lg flex items-center justify-between transition-colors cursor-pointer group shadow-xs">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded-full bg-sky-50 text-sky-700 border border-sky-200 flex items-center justify-center font-mono text-xs font-bold">1</span>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-900 group-hover:text-sky-700 transition-colors">Percutaneous Core Needle Biopsy or Robotic Bronchoscopy</span>
+<span class="text-xs text-slate-500">Histologic confirmation of cell type, PD-L1 expression &amp; NGS genomic profiling</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-mono text-xs text-sky-700 font-bold bg-sky-50 border border-sky-200 px-2 py-0.5 rounded">Δ Uncertainty: -31%</span>
+<span class="font-mono text-[10px] text-slate-400 mt-0.5">Highest Yield</span>
+</div>
+</div>
+<!-- Rec 2 -->
+<div class="bg-white hover:border-sky-300 border border-slate-200 p-3 rounded-lg flex items-center justify-between transition-colors cursor-pointer group shadow-xs">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded-full bg-sky-50 text-sky-700 border border-sky-200 flex items-center justify-center font-mono text-xs font-bold">2</span>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-900 group-hover:text-sky-700 transition-colors">18F-FDG PET-CT Whole Body Scan</span>
+<span class="text-xs text-slate-500">Metabolic characterization: check for mediastinal nodal avidity (N0 vs N1/N2)</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-mono text-xs text-sky-700 font-bold bg-sky-50 border border-sky-200 px-2 py-0.5 rounded">Δ Uncertainty: -18%</span>
+<span class="font-mono text-[10px] text-slate-400 mt-0.5">Staging Check</span>
+</div>
+</div>
+<!-- Rec 3 -->
+<div class="bg-white hover:border-sky-300 border border-slate-200 p-3 rounded-lg flex items-center justify-between transition-colors cursor-pointer group shadow-xs">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded-full bg-slate-100 text-slate-600 border border-slate-200 flex items-center justify-center font-mono text-xs font-bold">3</span>
+<div class="flex flex-col">
+<span class="text-sm font-semibold text-slate-900">Repeat Volumetric Thin-Slice CT at 3 Months</span>
+<span class="text-xs text-slate-500">Assess volume doubling time (VDT &lt; 400 days favors malignancy)</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-mono text-xs text-slate-600 font-bold bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Δ Uncertainty: -12%</span>
+<span class="font-mono text-[10px] text-slate-400 mt-0.5">Conservative</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Human-in-the-Loop Decision Station -->
+<div class="bg-white border-2 border-slate-200 p-4 rounded-xl flex flex-col gap-3 shadow-xs">
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs uppercase tracking-wider text-sky-800 font-bold">Physician Overrule &amp; Attestation Station</span>
+<span class="font-mono text-xs text-slate-500 font-medium">Dr. Sarah Mitchell, MD</span>
+</div>
+<!-- Clinician Notes Input -->
+<div class="flex flex-col gap-1">
+<label class="font-mono text-[11px] text-slate-600 font-semibold">Attending Clinical Impression &amp; Notes:</label>
+<textarea class="w-full bg-slate-50 border border-slate-300 p-2.5 rounded-lg text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:bg-white resize-none" rows="2">CT features are highly suspicious (spiculated margin, right upper lobe, 2.1cm). Recommend expedited robotic bronchoscopy with EBUS mediastinal nodal staging.</textarea>
+</div>
+<!-- Decision Action Radio Controls -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+<label class="flex items-center gap-2 bg-slate-50 border border-slate-200 p-2.5 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors">
+<input checked="" class="text-sky-600 focus:ring-0" name="physician_action" type="radio" value="accept"/>
+<span class="font-mono text-xs text-slate-800 font-semibold">Accept AI</span>
+</label>
+<label class="flex items-center gap-2 bg-slate-50 border border-slate-200 p-2.5 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors">
+<input class="text-sky-600 focus:ring-0" name="physician_action" type="radio" value="modify"/>
+<span class="font-mono text-xs text-slate-700">Modify</span>
+</label>
+<label class="flex items-center gap-2 bg-slate-50 border border-slate-200 p-2.5 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors">
+<input class="text-sky-600 focus:ring-0" name="physician_action" type="radio" value="order"/>
+<span class="font-mono text-xs text-slate-700">Order Tests</span>
+</label>
+<label class="flex items-center gap-2 bg-slate-50 border border-slate-200 p-2.5 rounded-lg cursor-pointer hover:bg-slate-100 transition-colors">
+<input class="text-rose-600 focus:ring-0" name="physician_action" type="radio" value="reject"/>
+<span class="font-mono text-xs text-rose-700 font-semibold">Reject AI</span>
+</label>
+</div>
+<!-- Signature & Sign-Off Button -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-2 border-t border-slate-100">
+<div class="flex items-center gap-1.5 text-slate-500 font-mono text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-sky-600">verified_user</span>
+<span>Cryptographic Audit Log: SHA-256 Enabled</span>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-700 text-white font-mono text-xs font-bold shadow-xs transition-all">
+<span class="material-symbols-outlined text-[17px]">draw</span>
+              Finalize &amp; Sign Off (Dr. Mitchell)
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Interaction Script for Toggle & Plain-Language Preview -->
+<script>
+    const techBtn = document.getElementById('view-tech-btn');
+    const plainBtn = document.getElementById('view-plain-btn');
+    const contourToggle = document.getElementById('toggle-contour');
+
+    if (techBtn && plainBtn) {
+      plainBtn.addEventListener('click', () => {
+        plainBtn.classList.add('bg-white', 'text-sky-700', 'font-bold', 'shadow-xs', 'border', 'border-slate-200');
+        plainBtn.classList.remove('text-slate-500');
+        techBtn.classList.remove('bg-white', 'text-sky-700', 'font-bold', 'shadow-xs', 'border', 'border-slate-200');
+        techBtn.classList.add('text-slate-500');
+      });
+
+      techBtn.addEventListener('click', () => {
+        techBtn.classList.add('bg-white', 'text-sky-700', 'font-bold', 'shadow-xs', 'border', 'border-slate-200');
+        techBtn.classList.remove('text-slate-500');
+        plainBtn.classList.remove('bg-white', 'text-sky-700', 'font-bold', 'shadow-xs', 'border', 'border-slate-200');
+        plainBtn.classList.add('text-slate-500');
+      });
+    }
+
+    if (contourToggle) {
+      contourToggle.addEventListener('click', () => {
+        contourToggle.classList.toggle('bg-sky-600');
+        contourToggle.classList.toggle('bg-slate-300');
+        contourToggle.classList.toggle('justify-end');
+        contourToggle.classList.toggle('justify-start');
+      });
+    }
+  </script>
+</div></div></main></div></body></html>

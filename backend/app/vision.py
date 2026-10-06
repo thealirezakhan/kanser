@@ -26,7 +26,6 @@ def _biomedclip_model(data: bytes) -> dict:
     )
     model = AutoModel.from_pretrained(
         "microsoft/BiomedCLIP-PubMedBERT_25k-vit_base_patch16_224",
-        trust_remote_code=True,
     ).eval()
     pixels = decode_dicom_pixels(data)
     lo, hi = float(pixels.min()), float(pixels.max())
@@ -69,9 +68,21 @@ class VisionWorker:
 
 _worker: VisionWorker | None = None
 
+# flips True once a vision analysis completes in this process; claim gating
+# (app.claims) refuses bounding-box text while False
+VISION_RAN = False
+
 
 def get_vision_worker() -> VisionWorker:
     global _worker
     if _worker is None:
-        _worker = VisionWorker()
+
+        class _TrackingWorker(VisionWorker):
+            async def analyze(self, data: bytes) -> dict:
+                out = await super().analyze(data)
+                global VISION_RAN
+                VISION_RAN = True
+                return out
+
+        _worker = _TrackingWorker()
     return _worker

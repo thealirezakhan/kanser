@@ -64,7 +64,8 @@ def test_ws_streams_agent_events_until_complete():
             f"/api/cases/{cid}/diagnose", headers=headers
         ).json()["data"]["run_id"]
 
-        with client.websocket_connect(f"/ws/runs/{run_id}?token={token}") as ws:
+        with client.websocket_connect(f"/ws/runs/{run_id}") as ws:
+            ws.send_json({"type": "auth", "token": token})
             seen = []
             deadline = time.time() + 30
             while time.time() < deadline:
@@ -83,7 +84,6 @@ def test_ws_unknown_run_closed():
 
     token = _login()
     with pytest.raises(WebSocketDisconnect):
-        with client.websocket_connect(
-            f"/ws/runs/does-not-exist?token={token}"
-        ) as ws:
+        with client.websocket_connect("/ws/runs/does-not-exist") as ws:
+            ws.send_json({"type": "auth", "token": token})
             ws.receive_json()

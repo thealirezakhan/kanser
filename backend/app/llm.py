@@ -18,6 +18,19 @@ class LocalLLM:
     name = "local"
 
     def complete(self, prompt: str) -> str:
+        if "CLINICAL GROUP CHAT" in prompt:
+            import re
+
+            m = re.search(r"You are ([^,]+), answering", prompt)
+            who = m.group(1) if m else "board"
+            return json.dumps(
+                {
+                    "reply": (
+                        f"{who}: local extractive fallback "
+                        "(external LLM unavailable); case context loaded."
+                    )
+                }
+            )
         conf = 0.55 if "role: clinical" in prompt else 0.7
         if "Consensus" in prompt:
             return json.dumps(

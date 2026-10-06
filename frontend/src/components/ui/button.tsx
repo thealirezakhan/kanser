@@ -8,10 +8,10 @@ export function Button({ variant = "primary", className, ...props }: ButtonProps
   return (
     <button
       className={cn(
-        "rounded-md px-4 py-2 text-sm font-medium transition disabled:opacity-50",
+        "rounded-lg px-4 py-2 text-sm font-semibold transition disabled:opacity-50",
         variant === "primary"
-          ? "bg-blue-600 text-white hover:bg-blue-700"
-          : "border border-neutral-300 bg-white text-neutral-800 hover:bg-neutral-50",
+          ? "bg-primary-container text-white hover:opacity-90 shadow-sm"
+          : "border border-outline-variant bg-white text-on-surface hover:bg-surface-container-low shadow-xs",
         className,
       )}
       {...props}

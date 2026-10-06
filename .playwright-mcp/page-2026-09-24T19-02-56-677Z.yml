@@ -1,9 +1,0 @@
-- generic [active] [ref=f2e1]:
-  - alert [ref=f2e2]
-  - main [ref=f2e3]:
-    - generic [ref=f2e4]:
-      - heading "Kanser — Sign in" [level=1] [ref=f2e5]
-      - generic [ref=f2e6]:
-        - textbox "Username" [ref=f2e7]
-        - textbox "Password" [ref=f2e8]
-        - button "Sign in" [ref=f2e9]

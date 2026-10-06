@@ -34,7 +34,9 @@ class FakeLLM:
         if "Consensus" in prompt:
             return json.dumps({"diagnosis": "Stage I adenocarcinoma", "confidence": 0.8})
         if "Clinician view" in prompt:
-            return json.dumps({"text": "Technical: nodule 2cm, EGFR wildtype."})
+            return json.dumps(
+                {"text": "Technical: nodule 2cm, wildtype panel negative."}
+            )
         if "Patient view" in prompt:
             return json.dumps({"text": "A small spot was found. Next step: biopsy."})
         return json.dumps({"hypothesis": "unknown", "confidence": 0.5})
@@ -140,8 +142,10 @@ def test_agent_step_events_carry_detail():
     for e in final["events"]:
         if e.get("type") == "agent_step" and "detail" in e:
             done.setdefault(e["node"], e)
-    assert done["radiology"]["detail"] == "2cm spiculated nodule"
-    assert "Stage I adenocarcinoma" in done["consensus"]["detail"]
+    assert "2cm spiculated nodule" in done["radiology"]["detail"]
+    assert "missing: dicom_scan" in done["radiology"]["detail"]
+    # GAP-002: no retrieved evidence -> abstention replaces the confident line
+    assert "ABSTAINED" in done["consensus"]["detail"]
     assert "granuloma" in done["self_critic"]["detail"]
     assert "Technical:" in done["explain"]["detail"]
     assert "adjusted" in done["debate"]["detail"]

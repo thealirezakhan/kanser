@@ -47,3 +47,15 @@ def test_diagnose_accepted():
     r = client.post(f"/api/cases/{cid}/diagnose")
     assert r.status_code == 202
     assert r.json()["data"]["run_id"]
+
+
+def test_run_id_derived_from_patient_and_case():
+    r = client.post(
+        "/api/cases", json={"patient_ref": "P-1024", "modalities": ["ct"]}
+    )
+    cid = r.json()["data"]["id"]
+    rid = client.post(f"/api/cases/{cid}/diagnose").json()["data"]["run_id"]
+    # meaningful: patient slug + case prefix + timestamp, not opaque hex
+    assert rid.startswith("p-1024-")
+    assert cid[:6] in rid
+    assert not all(c in "0123456789abcdef" for c in rid)

@@ -377,4 +377,46 @@ Overall: [READY / NOT READY]
 
 ---
 
-**Next action (2 min):** run Phase 0 — `git init` in `C:\Users\pcadmin\Desktop\kanser`, then create `backend/pyproject.toml` and `frontend` via `create-next-app`. Tick the first three boxes in §4.1.
+## Section 5 — new.md Gap Analysis & Phase Plan (Phase 9+)
+
+Audit of `new.md` (Proposed Workflow + 10 Novel Ideas) against current state (Phases 0–8 shipped).
+**Status key:** ✅ shipped · 🟡 partial · ❌ missing. **Nothing below is started.**
+
+### 5.1 Gap inventory
+
+| new.md item | Status | Evidence in codebase |
+|---|---|---|
+| Data Standardization Agent (clean/validate/convert) | ❌ | uploads stored raw; no unified intake schema |
+| Planning Agent (which modalities/specialists/tools) | 🟡 | `route_case` heuristic presence-routing only; no LLM planner, no tool selection |
+| Specialist agents → Diagnosis/Confidence/Evidence/**Missing Information** | 🟡 | reports carry hypothesis+confidence; `missing_flags` hardcoded `[]` (swarm.py) |
+| Knowledge Retrieval Agent (PubMed + guidelines + drug DB) | 🟡 | local Chroma 40 PubMed abstracts only; no guidelines, no drug database |
+| Evidence Verification (hallucination / contradiction / outdated / unsupported) | 🟡 | `filter_evidence` = year+source filter; no LLM claim-check |
+| Consensus via confidence-weighted reasoning | ✅ | `consensus` node |
+| Explainability (dx/conf/evidence/**image regions**/reasons/alternatives) | 🟡 | text explain ✅ clinician/patient ✅; bounding-box regions not wired; no structured reasons/alternatives |
+| Doctor Dashboard | 🟡 | minimal runs/cases UI; Stitch redesign in progress (screens 1–3) |
+| 1. Dynamic Agent Planning ⭐5 | 🟡 | heuristic only (see Planning) |
+| 2. Agent Debate ⭐5 | ✅ | debate loop ≤3 rounds |
+| 3. Confidence Calibration ⭐4 | ❌ | raw per-agent confs, no calibrated overall + reasons |
+| 4. Missing Modality Reasoning ⭐5 | ❌ | agents dropped silently; no explicit uncertainty statement |
+| 5. Self-Critique ⭐5 | ✅ | `self_critic` node |
+| 6. Evidence Verification ⭐5 | 🟡 | see verification gap |
+| 7. Longitudinal Memory ⭐5 | ❌ | no visits, no growth/progression compare |
+| 8. Adaptive Explainability ⭐4 | ✅ | Clinician/Patient toggle |
+| 9. Guideline Verification ⭐5 | ❌ | no NCCN/ACCP alignment check |
+| 10. Multi-Level Fusion ⭐5 | ❌ | single fusion point; no staged image→clinical→knowledge→reasoning |
+| Input breadth (blood reports, VCF, prior visits, histo images) | 🟡 | CT DICOM + notes + txt upload; vision worker exists, not in main flow |
+
+### 5.2 New phases (build order)
+
+- [ ] **Phase 9 — Data Standardization Agent**: unified intake schema (imaging / notes / labs / genomics / visits), validation + normalization pass, quality flags; parsers for structured blood reports and VCF; feed `case.metadata`. Exit: garbage inputs rejected with structured errors; all cases carry `standardized` payload.
+- [ ] **Phase 10 — LLM Planning Agent**: planner LLM picks specialists + tools (vision? retrieval? drug check?) from standardized case; heuristic `route_case` stays as fallback; plan trace streamed as event. Exit: plan event + cost/fallback counters; planner tests with FakeLLM.
+- [ ] **Phase 11 — Missing-modality reasoning + confidence calibration**: real `missing_flags` per agent; explicit uncertainty statements when modalities absent; calibrated overall confidence (per-agent + weighted overall + stated reason, e.g. "no pathology → −18%"). Exit: calibration block in report; tests for down-weight cases.
+- [ ] **Phase 12 — Evidence verification + guideline verification**: LLM verifier per citation (relevance / contradiction / outdated / unsupported → keep/reject); add guideline corpus (NCCN/ACCP excerpts) + drug-database source; `guideline_check` node flags diagnosis-vs-guideline discrepancies. Exit: verified-only citations with per-citation verdicts; discrepancy flags surfaced in report.
+- [ ] **Phase 13 — Longitudinal memory**: visits table + prior-run compare (nodule growth, stage progression); case timeline API + dashboard widget. Exit: visit 2 run references visit 1 deltas.
+- [ ] **Phase 14 — Explainability enrichment**: wire vision-worker regions into explain output (overlay data), structured `reasons[]` + `alternatives[]`; patient/clinician variants per audience. Exit: report shows regions + alternatives; tests on schema.
+- [ ] **Phase 15 — Multi-level fusion**: staged fusion pipeline with per-stage artifacts (image → clinical → knowledge → reasoning) replacing single-shot consensus input. Exit: fusion-stage events + ablation-friendly state.
+- [ ] **Phase 16 — Stitch UI rollout**: build all 3 Stitch screens (light theme) into the app — Live Agent Swarm Reasoning Room (`stitch/` export, light), Case Workspace & Evidence Cockpit, Clinical Command Center; wire to live run stream + real data. (Screen 1 conversion: in progress separately.)
+
+Dependency note: 9 → 10 → 11 → 12 → 15; 13 and 14 independent after 9; 16 parallel anytime.
+
+**Next action:** review this section — Phase 9 first when building resumes; Stitch screen 1 (light) ships now as UI work.

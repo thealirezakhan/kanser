@@ -1,2 +1,0 @@
-[     454ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/api/runs/b2760ce402ce49478c58f236cd1b9faa:0
-[     464ms] [ERROR] WebSocket connection to 'ws://localhost:8000/ws/runs/b2760ce402ce49478c58f236cd1b9faa?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc5MDMwNTM5M30.7EFQNSpOU5V1j0x9fTo_ozBPHIgwOQZ8BWIZNdOb1Sg' failed: Error during WebSocket handshake: Unexpected response code: 403 @ http://localhost:3000/_next/static/chunks/21vpqmoj7siro.js:0

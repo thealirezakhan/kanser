@@ -76,6 +76,8 @@ Routing derives from modality presence — add `pathology` modality to activate 
 
 Click **Diagnose** → navigates to `/runs/{run_id}`.
 
+Run IDs are derived from patient data — format `{patient}-{case6}-{YYYYMMDD}-{HHMMSS}-{ms}`, e.g. `demo-001-ce0d9b-20260925-161956-635`. Completed runs persist to Postgres; `GET /api/runs` lists them, `GET /api/runs/{id}` rehydrates after an API restart.
+
 Expected live timeline (streams over WebSocket, arrives in seconds — each completed step shows its `detail` line underneath, see section 8):
 
 ```
@@ -118,6 +120,27 @@ Each `agent_step` in the timeline carries a `detail` line showing what the node 
 
 With `GROQ_API_KEY` set, expect a real verdict (e.g. `Primary non-small cell lung cancer (NSCLC)` @ 0.92) and 10+ self-critic warnings instead of the local-fallback text.
 
+## 8. Agent group chat (Tumor Board + workspace)
+
+Two places to talk to the agents:
+
+- **Tumor Board** (`/tumor-board`): pick a case, group chat opens. Mention chips: `@all` fans out to all four agents (radiology, pathology, genomics, clinical) in one turn each; `@radiologist` etc. talk to one agent. No mention → clinical agent answers. Header shows per-agent token usage; each turn shows agent name + token count.
+- **Case workspace** (`/cases/{id}`): same chat embedded under **Ask the agent board**.
+
+Also: `POST /api/cases/{id}/chat` (REST) and `WS /ws/cases/{id}/chat?token=...` (live, `chat_turn`/`chat_done` events). Turn context = case summary + latest standardized findings + up to 3 evidence hits; history bounded to 16 entries.
+
+## 9. Longitudinal intel
+
+`/longitudinal`: pick a case, record visits (`POST /api/cases/{id}/visits`, 201 + Location). Response shows trend (`growing`/`stable`/`shrinking`), size delta, growth rate (mm/day), doubling time, and a bar series. `GET /api/cases/{id}/visits` returns the raw series.
+
+## 10. Evidence, alerts, admin
+
+- **Evidence** (`/evidence`): search the PubMed corpus → verified citations with PMID + relevance score (`GET /api/evidence/search?q=`).
+- **Alerts** (`/alerts`): failed runs + high-risk cases (`GET /api/alerts`); sidebar badge mirrors the count.
+- **Admin** (`/admin`): system status (`GET /api/system/status` — auth mode, rate limits, uptime, no secrets), security posture, API surface.
+- **Command Center** (`/`): dashboard — stats, priority queue, agent board, recent runs.
+- **Swarm** (`/swarm`): run list, refreshes every 5 s.
+
 ## Rate limits (important for testing)
 
 - Global: **60 req/min** per IP; `POST /api/simulate`-style heavy route: diagnose **5/min**.
@@ -131,7 +154,7 @@ With `GROQ_API_KEY` set, expect a real verdict (e.g. `Primary non-small cell lun
 | `Groq error 404 model_not_found` | Set `GROQ_MODEL` in `.env` to a model your key can list (`GET /openai/v1/models`) |
 | 429 Too Many Requests | Wait 60 s; rate limit is per-IP shared by browser + curl |
 | 401 Unauthorized | Token vs `JWT_SECRET` mismatch — clear localStorage, login again |
-| Run page says `expired` | API restarted (runs are in-memory). Start a new Diagnose. |
+| Run page says `expired` | Run predates persistence or ID mistyped — check `GET /api/runs`; start a new Diagnose. |
 | Empty Evidence list | Corpus missing — run `python scripts/ingest_corpus.py` inside api container / backend venv |
 | 5432 port conflict | Postgres is mapped to host **5433** on purpose (native PG owns 5432) |
 
@@ -140,14 +163,14 @@ With `GROQ_API_KEY` set, expect a real verdict (e.g. `Primary non-small cell lun
 ```powershell
 # backend
 cd backend
-.venv\Scripts\pytest -q -p no:warnings   # 63 passed, 1 skipped
+.venv\Scripts\pytest -q -p no:warnings   # 140 passed, 2 skipped
 .venv\Scripts\ruff check .
 .venv\Scripts\uvicorn app.main:app --reload --port 8000
 
 # frontend
 cd frontend
-npm run lint && npx vitest run && npm run build
+npm run lint && npm run test && npm run build   # 12 routes, 5 vitest
 npm run dev                              # :3000
 ```
 
-Backend tests: 63 passed (+1 BiomedCLIP E2E skipped unless `RUN_VISION_E2E=1`). Frontend: eslint clean, 5 vitest tests, production build green.
+Backend: 140 passed (+2 skipped: BiomedCLIP E2E unless `RUN_VISION_E2E=1`, PG suite unless reachable). Frontend: eslint clean, 5 vitest tests, production build green (12 routes incl. `/tumor-board`, `/evidence`, `/longitudinal`, `/alerts`, `/admin`).

@@ -1,7 +1,0 @@
-[     227ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
-[     249ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
-[   38336ms] [WARNING] WebSocket connection to 'ws://localhost:8000/ws/runs/cf6d752f7a494b499d44dfeb6e83ddfa?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc5MDMwMjc4NH0.reodXpFQg5kKmX7LvSCUBXpuXScgh1MTM9mFO-D2lfU' failed: WebSocket is closed before the connection is established. @ http://localhost:3000/_next/static/chunks/_1-7nk5a._.js:1707
-[   53885ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
-[   53925ms] [LOG] [Fast Refresh] done in 35ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
-[   54793ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
-[   54944ms] [LOG] [Fast Refresh] done in 29ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
