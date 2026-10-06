@@ -83,5 +83,5 @@ stitch/          exported design screens (HTML + preview PNGs)
 ## Documentation
 
 Architecture, roadmap and checklists live in `BLUEPRINT.md`, `WALKTHROUGH.md`,
-`project.md`, `new.md`, `CLINICAL_GAP_REGISTER.md`, `SAFETY_AND_HALLUCINATION_AUDIT.md`
-and `docs/`. They are context, not source of truth — the code is.
+`project.md`, `new.md`, `knowledge.md` and `docs/` (clinical gap register, safety and
+hallucination audits, workflow matrix). They are context, not source of truth — the code is.
