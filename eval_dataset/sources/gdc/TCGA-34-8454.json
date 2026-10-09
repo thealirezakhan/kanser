@@ -1,0 +1,270 @@
+﻿{
+    "id":  "059212b3-9e71-4d00-863f-3639c4e30ed1",
+    "lost_to_followup":  "No",
+    "submitter_slide_ids":  [
+                                "TCGA-34-8454-01A-01-TS1",
+                                "TCGA-34-8454-11A-01-TS1",
+                                "TCGA-34-8454-01Z-00-DX1",
+                                "TCGA-34-8454-01A-01-BS1"
+                            ],
+    "submitter_analyte_ids":  [
+                                  "TCGA-34-8454-01A-11W",
+                                  "TCGA-34-8454-11A-01R",
+                                  "TCGA-34-8454-01A-11D",
+                                  "TCGA-34-8454-11A-01W",
+                                  "TCGA-34-8454-10A-01D",
+                                  "TCGA-34-8454-11A-01H",
+                                  "TCGA-34-8454-01A-11H",
+                                  "TCGA-34-8454-10A-01W",
+                                  "TCGA-34-8454-01A-11R",
+                                  "TCGA-34-8454-11A-01D"
+                              ],
+    "created_datetime":  null,
+    "diagnosis_ids":  [
+                          "6ee50167-dc61-5655-b01e-c0e62b6cee37"
+                      ],
+    "updated_datetime":  "2024-12-19T16:39:07.797314-06:00",
+    "case_id":  "059212b3-9e71-4d00-863f-3639c4e30ed1",
+    "follow_ups":  [
+                       {
+                           "timepoint_category":  "Last Contact",
+                           "follow_up_id":  "4bdb61b5-b8fd-4199-b628-2454bbf0f40e",
+                           "updated_datetime":  "2024-12-23T09:55:06.256226-06:00",
+                           "submitter_id":  "TCGA-34-8454_follow_up",
+                           "disease_response":  "TF-Tumor Free",
+                           "state":  "released",
+                           "days_to_follow_up":  1180,
+                           "created_datetime":  "2024-12-19T16:39:07.797314-06:00"
+                       },
+                       {
+                           "timepoint_category":  "Follow-up",
+                           "follow_up_id":  "54155180-0f8c-4a51-be0b-174f8000cb10",
+                           "updated_datetime":  "2024-12-23T09:55:06.256226-06:00",
+                           "submitter_id":  "TCGA-34-8454_follow_up3",
+                           "disease_response":  "TF-Tumor Free",
+                           "state":  "released",
+                           "days_to_follow_up":  827,
+                           "created_datetime":  "2024-12-19T16:39:07.797314-06:00"
+                       },
+                       {
+                           "timepoint_category":  "Follow-up",
+                           "follow_up_id":  "cc76ed6a-d1ef-4687-9912-ab6f640857a2",
+                           "updated_datetime":  "2024-12-23T09:55:06.256226-06:00",
+                           "submitter_id":  "TCGA-34-8454_follow_up2",
+                           "disease_response":  "TF-Tumor Free",
+                           "state":  "released",
+                           "days_to_follow_up":  166,
+                           "created_datetime":  "2024-12-19T16:39:07.797314-06:00"
+                       },
+                       {
+                           "timepoint_category":  "Follow-up",
+                           "follow_up_id":  "dfbf7688-e681-4416-bd04-bcc858c73195",
+                           "updated_datetime":  "2024-12-23T09:55:06.256226-06:00",
+                           "submitter_id":  "TCGA-34-8454_follow_up4",
+                           "disease_response":  "TF-Tumor Free",
+                           "state":  "released",
+                           "days_to_follow_up":  1180,
+                           "created_datetime":  "2024-12-19T16:39:07.797314-06:00"
+                       }
+                   ],
+    "state":  "released",
+    "portion_ids":  [
+                        "aca41155-b0a8-4dac-ba6a-b529a05eb319",
+                        "09adac50-2569-4c80-8933-48866fb965f4",
+                        "e052a099-2772-4924-afa8-64bb6538f153",
+                        "29e35653-3f34-488f-91ae-67a0352e70b4",
+                        "622a6576-99e8-43fa-9ba8-86f8566f716c"
+                    ],
+    "submitter_portion_ids":  [
+                                  "TCGA-34-8454-10A-01",
+                                  "TCGA-34-8454-01A-11",
+                                  "TCGA-34-8454-01A-21-A45D-20",
+                                  "TCGA-34-8454-01A-21",
+                                  "TCGA-34-8454-11A-01"
+                              ],
+    "slide_ids":  [
+                      "b6053670-805d-43c3-9aa2-60a7d766b2fc",
+                      "a0a22e72-6e3f-44b8-8ebd-a62b80af5038",
+                      "a5340645-0bff-4f5a-8868-b43aceb5d45c",
+                      "57eb576b-332b-4c9f-85e5-296eb26b6e4e"
+                  ],
+    "disease_type":  "Squamous Cell Neoplasms",
+    "analyte_ids":  [
+                        "35000503-76b1-461a-8387-8133a4f34bfd",
+                        "0b55aaf8-46ed-4c72-87f3-89a8c02ad8f7",
+                        "8063ef93-82d8-47ac-a6a5-a2f2d1bcb7b8",
+                        "a944b36b-0781-4395-91a7-1bc323436bb9",
+                        "54bcd33a-0d35-4502-b2b1-271f4ab3beb7",
+                        "3b2f8a04-8354-4494-9ed9-8e04134d5be1",
+                        "62b5f8ea-47ca-4245-b2ef-648189e45d86",
+                        "c1165678-b0e0-4afb-9dfe-5a93fc1b2120",
+                        "f6c60e28-24bd-46d8-bc78-8ebc271d640e",
+                        "3487f43e-3023-4392-bdc3-abf6d857c995"
+                    ],
+    "submitter_id":  "TCGA-34-8454",
+    "days_to_consent":  15,
+    "aliquot_ids":  [
+                        "377a1287-96d9-48d7-9555-71e2329bdd8c",
+                        "b193b90e-f4e8-4a3d-bfd5-2a805fb33735",
+                        "46fd5c1b-47de-4f19-aca3-805c167b579b",
+                        "6e347f03-1583-4b0f-bd33-01d04d8176ab",
+                        "36b85857-4eb3-438a-a2bb-b26d072f2e9b",
+                        "ee40981f-f1cb-4d78-9490-448875647f7b",
+                        "71b1bdd1-2a00-4fd9-a229-cbc5d535af03",
+                        "fa477709-7e57-4435-bc44-2dfff1b0b655",
+                        "28abcff6-98dc-47a6-8895-7bd5b9125588",
+                        "f6d151e3-d078-45c4-9238-a9337fe5a846",
+                        "70bd84c3-878d-4d3f-ac91-c29e3079a534",
+                        "bb3f46ee-e7c1-44f3-9a1c-129af359977c",
+                        "9ca201af-d394-4624-9495-31a6e4ff861b",
+                        "b8a9f267-1d10-4c2f-9ea5-f9b72d2f5727",
+                        "4540fc7e-1378-4e53-96fb-99f7f3ead1fc",
+                        "54ad0821-2309-4938-8fef-c6d99189495b",
+                        "ecf2a0cc-9a37-4d93-861d-bfecff78cfe6"
+                    ],
+    "submitter_aliquot_ids":  [
+                                  "TCGA-34-8454-01A-11H-2325-13",
+                                  "TCGA-34-8454-10A-01D-2323-08",
+                                  "TCGA-34-8454-10A-01D-2322-01",
+                                  "TCGA-34-8454-10A-01D-A719-36",
+                                  "TCGA-34-8454-11A-01D-2322-01",
+                                  "TCGA-34-8454-10A-01D-A730-36",
+                                  "TCGA-34-8454-11A-01W-2345-08",
+                                  "TCGA-34-8454-11A-01D-2323-08",
+                                  "TCGA-34-8454-01A-11W-2345-08",
+                                  "TCGA-34-8454-01A-11D-2323-08",
+                                  "TCGA-34-8454-01A-11R-2326-07",
+                                  "TCGA-34-8454-01A-11D-2322-01",
+                                  "TCGA-34-8454-01A-11D-A719-36",
+                                  "TCGA-34-8454-11A-01R-2326-07",
+                                  "TCGA-34-8454-11A-01H-2325-13",
+                                  "TCGA-34-8454-10A-01W-2345-08",
+                                  "TCGA-34-8454-01A-11D-2324-05"
+                              ],
+    "diagnoses":  [
+                      {
+                          "synchronous_malignancy":  "No",
+                          "ajcc_pathologic_stage":  "Stage IIIA",
+                          "days_to_diagnosis":  0,
+                          "laterality":  "Right",
+                          "created_datetime":  null,
+                          "treatments":  [
+                                             {
+                                                 "days_to_treatment_end":  131,
+                                                 "clinical_trial_indicator":  "Yes",
+                                                 "days_to_treatment_start":  68,
+                                                 "treatment_id":  "8f1ac2c6-ea07-51c1-a37c-09b28ad39b74",
+                                                 "submitter_id":  "TCGA-34-8454_treatment",
+                                                 "treatment_type":  "Chemotherapy",
+                                                 "therapeutic_agents":  "Cisplatin",
+                                                 "treatment_or_therapy":  "yes",
+                                                 "created_datetime":  null,
+                                                 "treatment_intent_type":  null,
+                                                 "updated_datetime":  "2024-12-23T09:55:06.256226-06:00",
+                                                 "treatment_outcome":  "Unknown",
+                                                 "state":  "released"
+                                             },
+                                             {
+                                                 "treatment_intent_type":  "Adjuvant",
+                                                 "updated_datetime":  "2024-12-23T09:55:06.256226-06:00",
+                                                 "treatment_id":  "9ec6edac-6db9-46bf-bae3-30d078dc9429",
+                                                 "submitter_id":  "TCGA-34-8454_treatment3",
+                                                 "treatment_type":  "Radiation Therapy, NOS",
+                                                 "state":  "released",
+                                                 "treatment_or_therapy":  "no",
+                                                 "created_datetime":  "2024-12-19T16:39:07.797314-06:00"
+                                             },
+                                             {
+                                                 "days_to_treatment_end":  166,
+                                                 "clinical_trial_indicator":  "No",
+                                                 "days_to_treatment_start":  68,
+                                                 "updated_datetime":  "2024-12-23T09:55:06.256226-06:00",
+                                                 "treatment_id":  "bcff3879-2657-4ce4-b9b9-917a45ccfa72",
+                                                 "submitter_id":  "TCGA-34-8454_treatment2",
+                                                 "treatment_type":  "Chemotherapy",
+                                                 "treatment_outcome":  "Complete Response",
+                                                 "state":  "released",
+                                                 "therapeutic_agents":  "Docetaxel",
+                                                 "treatment_or_therapy":  "yes",
+                                                 "created_datetime":  "2024-12-19T16:39:07.797314-06:00"
+                                             }
+                                         ],
+                          "last_known_disease_status":  null,
+                          "tissue_or_organ_of_origin":  "Lower lobe, lung",
+                          "days_to_last_follow_up":  1180.0,
+                          "age_at_diagnosis":  22913,
+                          "primary_diagnosis":  "Squamous cell carcinoma, NOS",
+                          "updated_datetime":  "2025-10-24T10:04:25.261470-05:00",
+                          "prior_malignancy":  "no",
+                          "year_of_diagnosis":  2011,
+                          "state":  "released",
+                          "prior_treatment":  "No",
+                          "diagnosis_is_primary_disease":  true,
+                          "days_to_last_known_disease_status":  null,
+                          "ajcc_staging_system_edition":  "7th",
+                          "ajcc_pathologic_t":  "T3",
+                          "days_to_recurrence":  null,
+                          "morphology":  "8070/3",
+                          "ajcc_pathologic_n":  "N1",
+                          "ajcc_pathologic_m":  "M0",
+                          "submitter_id":  "TCGA-34-8454_diagnosis",
+                          "residual_disease":  "R0",
+                          "classification_of_tumor":  "primary",
+                          "diagnosis_id":  "6ee50167-dc61-5655-b01e-c0e62b6cee37",
+                          "icd_10_code":  "C34.3",
+                          "site_of_resection_or_biopsy":  "Lung, NOS",
+                          "tumor_grade":  null,
+                          "progression_or_recurrence":  null
+                      }
+                  ],
+    "sample_ids":  [
+                       "df9a2ffb-769c-4294-9ac1-048a5ce22508",
+                       "4b9cb117-1bb1-475e-a91e-5640fd2bf0c7",
+                       "0657e28b-6452-4647-bbea-9323ffa53be2",
+                       "6299edb0-b82f-49d0-bc5b-b82cb34e32bd"
+                   ],
+    "consent_type":  "Informed Consent",
+    "demographic":  {
+                        "race":  "white",
+                        "ethnicity":  "not hispanic or latino",
+                        "vital_status":  "Alive",
+                        "age_at_index":  62,
+                        "submitter_id":  "TCGA-34-8454_demographic",
+                        "days_to_birth":  -22913,
+                        "created_datetime":  null,
+                        "year_of_birth":  null,
+                        "demographic_id":  "2f29af16-407a-5d45-8168-b9f51b414ed1",
+                        "updated_datetime":  "2025-10-16T15:40:32.185313-05:00",
+                        "age_is_obfuscated":  false,
+                        "state":  "released",
+                        "sex_at_birth":  "female",
+                        "year_of_death":  null,
+                        "country_of_residence_at_enrollment":  "United States"
+                    },
+    "submitter_sample_ids":  [
+                                 "TCGA-34-8454-01Z",
+                                 "TCGA-34-8454-01A",
+                                 "TCGA-34-8454-11A",
+                                 "TCGA-34-8454-10A"
+                             ],
+    "exposures":  [
+                      {
+                          "cigarettes_per_day":  null,
+                          "tobacco_smoking_status":  "Current Reformed Smoker for \u003c or = 15 yrs",
+                          "alcohol_history":  null,
+                          "updated_datetime":  "2025-01-16T14:30:46.938295-06:00",
+                          "exposure_id":  "c5f0765f-8380-5973-bedf-197880c91df1",
+                          "exposure_type":  "Tobacco",
+                          "submitter_id":  "TCGA-34-8454_exposure",
+                          "state":  "released",
+                          "created_datetime":  null,
+                          "alcohol_intensity":  null,
+                          "pack_years_smoked":  90
+                      }
+                  ],
+    "primary_site":  "Bronchus and lung",
+    "submitter_diagnosis_ids":  [
+                                    "TCGA-34-8454_diagnosis"
+                                ],
+    "index_date":  "Diagnosis"
+}

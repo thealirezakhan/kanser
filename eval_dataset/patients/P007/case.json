@@ -1,0 +1,34 @@
+{
+  "patient_id": "P007",
+  "data_origin": "synthetic",
+  "synthetic_notice": "This is a fully constructed teaching case. No real patient record was used. Nothing in this file or its timeline may be attributed to a real patient.",
+  "source": {
+    "clinical": "synthetic (constructed for evaluation)",
+    "molecular": "synthetic (not performed; not indicated)",
+    "imaging": "synthetic (constructed; no TCIA/GDC imaging)"
+  },
+  "demographics": {
+    "age_at_index_years": 54,
+    "sex_at_birth": "female",
+    "race": "not recorded",
+    "ethnicity": "not recorded",
+    "origin": "synthetic"
+  },
+  "index_diagnosis": {
+    "site": "Right lower lobe, lung (synthetic)",
+    "origin": "synthetic"
+  },
+  "modalities_present": [
+    "symptoms",
+    "imaging_metadata",
+    "pathology",
+    "lab_values",
+    "longitudinal_follow_up"
+  ],
+  "default_as_of_day": 540,
+  "agent_must_predict": [
+    "histology_class",
+    "stage_class",
+    "egfr_status"
+  ]
+}

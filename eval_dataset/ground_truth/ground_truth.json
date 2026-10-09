@@ -1,0 +1,146 @@
+{
+  "version": "1.0",
+  "notice": "IMMUTABLE GROUND TRUTH. Never expose this file (or anything in ground_truth/) to the diagnosis agent. Score only from predictions generated against patients/ inputs.",
+  "label_sets": {
+    "histology_class": [
+      "lung_adenocarcinoma",
+      "lung_squamous_cell_carcinoma",
+      "small_cell_lung_carcinoma",
+      "benign_pulmonary_granuloma"
+    ],
+    "stage_class": [
+      "IA",
+      "IIIA",
+      "IV",
+      "extensive_stage",
+      "not_applicable"
+    ],
+    "egfr_status": [
+      "EGFR_mutant",
+      "EGFR_not_mutated",
+      "not_applicable"
+    ]
+  },
+  "patients": {
+    "P001": {
+      "source_patient": "TCGA-J2-A4AE",
+      "data_origin": "real",
+      "histology_class": "lung_adenocarcinoma",
+      "histology_detail": "Adenocarcinoma, NOS (ICD-O-3 8140/3), left upper lobe",
+      "stage_class": "IA",
+      "acceptable_stage_classes": [
+        "IA"
+      ],
+      "stage_detail": "Stage IA (GDC ajcc_pathologic_stage; descriptors T1a N0 MX)",
+      "egfr_status": "EGFR_not_mutated",
+      "egfr_evidence": "Open GDC MAF (file 07d5681a-c07b-4a25-bfc3-c8b56e36445c) contains no EGFR variant; called variants are MET frame-shift and RB1 p.M148Vfs*8 / p.E237Dfs*27",
+      "outcome_at_last_record": "Alive; tumor-free at days 282, 671 and 1079 (no evidence of disease through last follow-up)",
+      "trajectory": "no_recurrence_through_last_follow_up",
+      "ground_truth_origin": "real (GDC diagnoses, demographic, follow_ups, open MAF)",
+      "scenario": "Early-stage adenocarcinoma, resected, no evidence of disease through last follow-up"
+    },
+    "P002": {
+      "source_patient": "TCGA-34-8454",
+      "data_origin": "real",
+      "histology_class": "lung_squamous_cell_carcinoma",
+      "histology_detail": "Squamous cell carcinoma, NOS (ICD-O-3 8070/3), right lower lobe",
+      "stage_class": "IIIA",
+      "acceptable_stage_classes": [
+        "IIIA"
+      ],
+      "stage_detail": "Stage IIIA (GDC ajcc_pathologic_stage; descriptors T3 N1 M0)",
+      "egfr_status": "EGFR_not_mutated",
+      "egfr_evidence": "Open GDC MAF (file 8adbc731-bf59-499c-85e2-a0ee6af7f5e1) contains no EGFR variant; called variants are PIK3CA p.E545Q and TP53 p.H179Y",
+      "outcome_at_last_record": "Alive; tumor-free at days 166, 827 and 1180",
+      "trajectory": "no_recurrence_through_last_follow_up",
+      "ground_truth_origin": "real (GDC diagnoses, demographic, follow_ups, open MAF)",
+      "scenario": "Locally advanced squamous cell carcinoma treated with curative intent, tumor-free surveillance through last follow-up"
+    },
+    "P003": {
+      "source_patient": "TCGA-38-6178",
+      "data_origin": "real",
+      "histology_class": "lung_adenocarcinoma",
+      "histology_detail": "Adenocarcinoma, NOS (ICD-O-3 8140/3), left upper lobe",
+      "stage_class": "IIIA",
+      "acceptable_stage_classes": [
+        "IIIA"
+      ],
+      "stage_detail": "Stage IIIA (GDC ajcc_pathologic_stage; descriptors T2b N2, M not recorded)",
+      "egfr_status": "EGFR_mutant",
+      "egfr_evidence": "Open GDC MAF (file da51eb21-62b2-48f5-9f8c-a05248ac3c63): EGFR p.E746_A750del in-frame deletion (exon 19 region) plus TP53 p.R283P",
+      "outcome_at_last_record": "Alive; disease present (With Tumor) at days 158 and 448",
+      "trajectory": "persistent_disease_at_last_follow_up",
+      "ground_truth_origin": "real (GDC diagnoses, demographic, follow_ups, open MAF)",
+      "scenario": "EGFR-mutated adenocarcinoma, node-positive locally advanced disease, disease present at last follow-up"
+    },
+    "P004": {
+      "source_patient": "TCGA-50-6591",
+      "data_origin": "real",
+      "histology_class": "lung_adenocarcinoma",
+      "histology_detail": "Adenocarcinoma, NOS (ICD-O-3 8140/3), left lower lobe",
+      "stage_class": "IV",
+      "acceptable_stage_classes": [
+        "IV"
+      ],
+      "stage_detail": "Stage IV (GDC ajcc_pathologic_stage; descriptors T2 N0 M1)",
+      "egfr_status": "EGFR_mutant",
+      "egfr_evidence": "Open GDC MAF (file cd44bad1-37f5-4191-8915-7da80c02f565): EGFR p.K754_I759del in-frame deletion and EGFR p.L833V missense, plus TP53 p.F54Sfs*69. Variant pathogenicity is not asserted beyond the MAF calls; score EGFR as mutant because an EGFR coding variant is present.",
+      "outcome_at_last_record": "Deceased at day 119; disease present (With Tumor) at day 119",
+      "trajectory": "rapid_progression_death",
+      "ground_truth_origin": "real (GDC diagnoses, demographic, follow_ups, open MAF)",
+      "scenario": "Metastatic adenocarcinoma at presentation, rapid clinical deterioration, deceased at day 119"
+    },
+    "P005": {
+      "source_patient": "TCGA-50-5049",
+      "data_origin": "real",
+      "histology_class": "lung_adenocarcinoma",
+      "histology_detail": "Adenocarcinoma, NOS (ICD-O-3 8140/3), right upper lobe",
+      "stage_class": "IA",
+      "acceptable_stage_classes": [
+        "IA",
+        "IB"
+      ],
+      "stage_detail": "Stage IA (GDC ajcc_pathologic_stage). NOTE: source descriptors read T2 N0 M0, which conflicts with the recorded IA label (AJCC would map T2 N0 to IB). stage_class follows the authoritative ajcc_pathologic_stage field as published; the raw descriptors remain visible in the timeline so scorers can see the source inconsistency.",
+      "egfr_status": "EGFR_not_mutated",
+      "egfr_evidence": "Open GDC MAF (file 3c95d846-6ef5-4810-a389-7444d4873fef) contains no EGFR variant; called variants are RET p.P566T and TP53 p.E298*",
+      "outcome_at_last_record": "Alive; tumor-free at day 1485, disease present (With Tumor) at days 2146 and 3094",
+      "trajectory": "late_recurrence_after_four_years",
+      "ground_truth_origin": "real (GDC diagnoses, demographic, follow_ups, open MAF)",
+      "scenario": "Early-stage adenocarcinoma with late recurrence: tumor-free for four years, then disease present from day 2146 onward"
+    },
+    "P006": {
+      "source_patient": "SYNTHETIC",
+      "data_origin": "synthetic",
+      "histology_class": "small_cell_lung_carcinoma",
+      "histology_detail": "Small cell carcinoma (ICD-O-3 8041/3) - constructed case",
+      "stage_class": "extensive_stage",
+      "acceptable_stage_classes": [
+        "extensive_stage"
+      ],
+      "stage_detail": "Extensive stage (distant hepatic metastasis) - constructed case",
+      "egfr_status": "not_applicable",
+      "egfr_evidence": "Not tested in this constructed case; EGFR testing is not standard for this histology",
+      "outcome_at_last_record": "Deceased at day 240 after initial response then progression - constructed outcome",
+      "trajectory": "initial_response_then_progression",
+      "ground_truth_origin": "synthetic (fully constructed; never attribute to a real patient)",
+      "scenario": "SYNTHETIC: extensive-stage small cell lung carcinoma, initial response then progression"
+    },
+    "P007": {
+      "source_patient": "SYNTHETIC",
+      "data_origin": "synthetic",
+      "histology_class": "benign_pulmonary_granuloma",
+      "histology_detail": "Necrotizing granulomatous inflammation, no malignancy - constructed case",
+      "stage_class": "not_applicable",
+      "acceptable_stage_classes": [
+        "not_applicable"
+      ],
+      "stage_detail": "No malignant tumor, staging not applicable - constructed case",
+      "egfr_status": "not_applicable",
+      "egfr_evidence": "Not applicable; benign process",
+      "outcome_at_last_record": "Alive, nodule stable at 18 months, no oncologic therapy - constructed outcome",
+      "trajectory": "benign_stable",
+      "ground_truth_origin": "synthetic (fully constructed; never attribute to a real patient)",
+      "scenario": "SYNTHETIC: incidental pulmonary nodule that proves benign (granulomatous inflammation) on biopsy"
+    }
+  }
+}

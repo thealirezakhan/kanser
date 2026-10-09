@@ -1,0 +1,36 @@
+{
+  "patient_id": "P006",
+  "data_origin": "synthetic",
+  "synthetic_notice": "This is a fully constructed teaching case. No real patient record was used. Only the staging, treatment-planning and response-assessment patterns are based on authoritative references (WHO Classification of Thoracic Tumours, 5th ed.; NCCN Small Cell Lung Cancer guidelines). Demographics, dates, laboratory values, imaging findings and clinical course are invented and must never be attributed to a real patient.",
+  "source": {
+    "clinical": "synthetic (constructed for evaluation)",
+    "molecular": "synthetic (not tested in this case)",
+    "imaging": "synthetic (constructed; no TCIA/GDC imaging)"
+  },
+  "demographics": {
+    "age_at_index_years": 68,
+    "sex_at_birth": "male",
+    "race": "not recorded",
+    "ethnicity": "not recorded",
+    "origin": "synthetic"
+  },
+  "index_diagnosis": {
+    "site": "Right hilar mass (synthetic)",
+    "origin": "synthetic"
+  },
+  "modalities_present": [
+    "symptoms",
+    "imaging_metadata",
+    "pathology",
+    "staging",
+    "lab_values",
+    "treatment",
+    "short_follow_up"
+  ],
+  "default_as_of_day": 154,
+  "agent_must_predict": [
+    "histology_class",
+    "stage_class",
+    "egfr_status"
+  ]
+}

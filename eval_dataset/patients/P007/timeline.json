@@ -1,0 +1,86 @@
+{
+  "patient_id": "P007",
+  "time_axis": "Synthetic calendar dates (this case is fully constructed). day_offset is included for uniformity with real cases.",
+  "events": [
+    {
+      "seq": 1,
+      "day_offset": -30,
+      "date": "2024-01-15",
+      "type": "symptom",
+      "title": "Initial presentation",
+      "content": "54-year-old female lifelong non-smoker, asymptomatic, referred after a 1.4 cm ground-glass-predominant nodule in the right lower lobe was found incidentally on imaging obtained after a minor motor-vehicle accident. No weight loss, no hemoptysis, no fever. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 2,
+      "day_offset": -25,
+      "date": "2024-01-20",
+      "type": "imaging",
+      "title": "High-resolution CT chest (report text)",
+      "content": "Constructed report: 1.4 cm mixed ground-glass/solid nodule in the right lower lobe, no spiculation, no adenopathy, no pleural effusion. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 3,
+      "day_offset": -20,
+      "date": "2024-01-25",
+      "type": "imaging",
+      "title": "PET/CT (report text)",
+      "content": "Constructed report: the right lower-lobe nodule shows low-grade FDG uptake (SUVmax 1.2), below the usual threshold for malignancy; no hypermetabolic nodes or distant foci. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 4,
+      "day_offset": 0,
+      "date": "2024-02-14",
+      "type": "pathology",
+      "title": "CT-guided core biopsy",
+      "content": "Constructed report: core biopsy of the right lower-lobe nodule shows necrotizing granulomatous inflammation with multinucleated giant cells; special stains (GMS, Ziehl-Neelsen) negative. No malignant cells identified. Correlates with a benign granuloma. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 5,
+      "day_offset": 0,
+      "date": "2024-02-14",
+      "type": "lab",
+      "title": "Laboratory values",
+      "content": "Constructed labs: complete blood count normal, ACE level normal, calcium normal. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 6,
+      "day_offset": 150,
+      "date": "2024-07-13",
+      "type": "follow_up",
+      "title": "Surveillance CT (day 150)",
+      "content": "Constructed assessment: nodule unchanged at 1.4 cm, no new findings. No treatment given. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 7,
+      "day_offset": 365,
+      "date": "2025-02-13",
+      "type": "follow_up",
+      "title": "Surveillance CT (day 365)",
+      "content": "Constructed assessment: nodule stable in size and appearance; benign course confirmed. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 8,
+      "day_offset": 540,
+      "date": "2025-08-08",
+      "type": "encounter",
+      "title": "Last recorded contact (day 540)",
+      "content": "Constructed outcome: patient alive, discharged to routine annual follow-up. No oncologic therapy at any point. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    }
+  ]
+}

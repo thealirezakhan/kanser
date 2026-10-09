@@ -1,0 +1,96 @@
+{
+  "patient_id": "P004",
+  "time_axis": "day_offset relative to index diagnosis (day 0). Absolute calendar dates are not present in the TCGA open-data release and are intentionally omitted.",
+  "events": [
+    {
+      "seq": 1,
+      "day_offset": -40,
+      "date": null,
+      "type": "symptom",
+      "title": "Initial presentation",
+      "content": "63-year-old lifelong non-smoker with progressive dyspnea, non-productive cough and new bone pain over six weeks. Poor performance status at presentation.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation. Smoking status is real (GDC exposures.tobacco_smoking_status='Lifelong Non-Smoker'); the symptom narrative is not in source data."
+    },
+    {
+      "seq": 2,
+      "day_offset": -30,
+      "date": null,
+      "type": "imaging",
+      "title": "CT/PET studies (imaging metadata only)",
+      "content": "Imaging study present for this patient in TCIA collection TCGA-LUAD. 9 series total, modalities CT and PT, example series descriptions: 'Topogram', 'CT Spiral 5.0 B40s'. Series metadata only; no pixel data and no report text are distributed with this dataset.",
+      "data_origin": "real",
+      "source": "TCIA NBIA API getSeries, Collection=TCGA-LUAD, PatientID=TCGA-50-6591"
+    },
+    {
+      "seq": 3,
+      "day_offset": -25,
+      "date": null,
+      "type": "imaging",
+      "title": "Staging imaging (report text)",
+      "content": "Constructed report: left lower-lobe primary mass with a hepatic lesion suspicious for metastasis and a sclerotic bony lesion. No prior malignancy.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; TCGA/TCIA open data contains no radiology report text."
+    },
+    {
+      "seq": 4,
+      "day_offset": 0,
+      "date": null,
+      "type": "pathology",
+      "title": "Biopsy pathology",
+      "content": "Left lower-lobe lung mass, image-guided biopsy. Histologic examination shows adenocarcinoma. ICD-O-3 morphology 8140/3, primary site: lower lobe of lung.",
+      "data_origin": "real_derived",
+      "source": "Text assembled verbatim from GDC diagnoses fields primary_diagnosis, morphology, tissue_or_organ_of_origin, laterality"
+    },
+    {
+      "seq": 5,
+      "day_offset": 0,
+      "date": null,
+      "type": "staging",
+      "title": "Pathologic staging descriptors",
+      "content": "Primary tumor: T2. Regional lymph nodes: N0. Distant metastases: M1 (distant metastasis present).",
+      "data_origin": "real",
+      "source": "GDC diagnoses.ajcc_pathologic_t / _n / _m"
+    },
+    {
+      "seq": 6,
+      "day_offset": 3,
+      "date": null,
+      "type": "molecular",
+      "title": "Somatic variant analysis (open access)",
+      "content": "Open-access whole-exome somatic mutation profile available. Called non-silent variants: EGFR p.K754_I759del (in-frame deletion), EGFR p.L833V (missense), TP53 p.F54Sfs*69 (frame-shift deletion). No non-silent KRAS, BRAF, ALK, ROS1, ERBB2, RET, NRAS or PIK3CA variants called in this file.",
+      "data_origin": "real",
+      "source": "GDC open Masked Somatic Mutation MAF, file cd44bad1-37f5-4191-8915-7da80c02f565"
+    },
+    {
+      "seq": 7,
+      "day_offset": 7,
+      "date": null,
+      "type": "treatment",
+      "title": "Supportive / systemic treatment",
+      "content": "Constructed treatment course: best supportive care with a short trial of systemic therapy; treatment discontinued early due to clinical decline. No treatment records exist in the source dataset.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation. The GDC case record has an empty treatments block for this case."
+    },
+    {
+      "seq": 8,
+      "day_offset": 119,
+      "date": null,
+      "type": "follow_up",
+      "title": "Last follow-up (day 119)",
+      "content": "Disease response recorded: With Tumor (WT). Two duplicate source records exist for this day; deduplicated here.",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=119, disease_response=WT-With Tumor (2 duplicate entries)"
+    },
+    {
+      "seq": 9,
+      "day_offset": 119,
+      "date": null,
+      "type": "encounter",
+      "title": "Death",
+      "content": "Vital status recorded as Dead, days_to_death=119 from diagnosis.",
+      "data_origin": "real",
+      "source": "GDC demographic.vital_status=Dead, days_to_death=119"
+    }
+  ]
+}

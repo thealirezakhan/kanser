@@ -1,0 +1,116 @@
+{
+  "patient_id": "P006",
+  "time_axis": "Synthetic calendar dates (this case is fully constructed). day_offset is included for uniformity with real cases.",
+  "events": [
+    {
+      "seq": 1,
+      "day_offset": -70,
+      "date": "2022-11-07",
+      "type": "symptom",
+      "title": "Initial presentation",
+      "content": "68-year-old male, 45 pack-year smoking history, presents with a 10 kg weight loss over three months, worsening cough, and right-sided chest discomfort. Performance status ECOG 1. Synthetic case: these details are constructed.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 2,
+      "day_offset": -60,
+      "date": "2022-11-17",
+      "type": "imaging",
+      "title": "CT chest/abdomen with contrast (report text)",
+      "content": "Constructed report: 6.8 cm right hilar mass encasing the right main bronchus, ipsilateral mediastinal lymphadenopathy, and two hepatic lesions (largest 3.1 cm) suspicious for metastases. No brain imaging abnormality reported at this time. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 3,
+      "day_offset": -55,
+      "date": "2022-11-22",
+      "type": "imaging",
+      "title": "PET/CT (report text)",
+      "content": "Constructed report: intensely FDG-avid right hilar mass (SUVmax 14.2) with hypermetabolic mediastinal nodes and hepatic lesions; no uptake above background elsewhere. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 4,
+      "day_offset": -40,
+      "date": "2022-12-07",
+      "type": "pathology",
+      "title": "Biopsy pathology",
+      "content": "Constructed report: CT-guided biopsy of the right hilar mass. Small cell carcinoma (ICD-O-3 8041/3) with nuclear molding, finely granular chromatin, high mitotic rate and extensive necrosis. Immunohistochemistry: TTF-1 positive, Ki-67 approximately 80%, p40 negative. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient. Immunophenotype pattern per WHO Thoracic Tumours, 5th ed."
+    },
+    {
+      "seq": 5,
+      "day_offset": -38,
+      "date": "2022-12-09",
+      "type": "staging",
+      "title": "Staging work-up",
+      "content": "Constructed staging: primary tumor with ipsilateral mediastinal nodal involvement and hepatic metastases; no CNS metastases on MRI brain. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 6,
+      "day_offset": -38,
+      "date": "2022-12-09",
+      "type": "lab",
+      "title": "Laboratory values at staging",
+      "content": "Constructed labs: LDH 412 U/L (elevated), sodium 136 mmol/L, alkaline phosphatase 148 U/L, albumin 3.2 g/dL, creatinine normal. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 7,
+      "day_offset": -35,
+      "date": "2022-12-12",
+      "type": "molecular",
+      "title": "Molecular testing",
+      "content": "Constructed result: no EGFR, ALK or ROS1 testing performed; PD-L1 immunohistochemistry not performed. Molecular profiling is not routine for this histology in this synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 8,
+      "day_offset": -30,
+      "date": "2022-12-17",
+      "type": "treatment",
+      "title": "Systemic therapy started",
+      "content": "Constructed treatment: four cycles of platinum-based chemotherapy with etoposide, followed by consolidative thoracic radiation. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient. Regimen pattern per NCCN SCLC guidelines."
+    },
+    {
+      "seq": 9,
+      "day_offset": 60,
+      "date": "2023-03-18",
+      "type": "follow_up",
+      "title": "Response assessment (day 60)",
+      "content": "Constructed assessment: partial response - hilar mass reduced to 3.2 cm, hepatic lesions decreased. Patient reports improved appetite and weight stabilization. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 10,
+      "day_offset": 154,
+      "date": "2023-06-20",
+      "type": "follow_up",
+      "title": "Disease progression (day 154)",
+      "content": "Constructed assessment: new cough and fatigue; CT shows regrowth of the hilar mass to 5.9 cm with new adrenal metastasis, confirming progression after initial response. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    },
+    {
+      "seq": 11,
+      "day_offset": 240,
+      "date": "2023-09-13",
+      "type": "encounter",
+      "title": "Death (day 240)",
+      "content": "Constructed outcome: patient deceased at home, 240 days after diagnosis, consistent with the rapid natural history of this disease. Synthetic case.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; no real patient."
+    }
+  ]
+}

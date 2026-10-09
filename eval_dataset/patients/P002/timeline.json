@@ -1,0 +1,116 @@
+{
+  "patient_id": "P002",
+  "time_axis": "day_offset relative to index diagnosis (day 0). Absolute calendar dates are not present in the TCGA open-data release and are intentionally omitted.",
+  "events": [
+    {
+      "seq": 1,
+      "day_offset": -45,
+      "date": null,
+      "type": "symptom",
+      "title": "Initial presentation",
+      "content": "62-year-old former smoker (stopped within the past 15 years) presents with a two-month history of cough and intermittent hemoptysis. No known prior malignancy.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation. Smoking status is real (GDC exposures.tobacco_smoking_status='Current Reformed Smoker for < or = 15 yrs'); the symptom narrative is not in source data."
+    },
+    {
+      "seq": 2,
+      "day_offset": -30,
+      "date": null,
+      "type": "imaging",
+      "title": "Diagnostic CT chest (report text)",
+      "content": "Constructed report: soft-tissue mass in the right lower lobe measuring approximately 4.5 cm, with ipsilateral hilar adenopathy. No pleural effusion.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; TCGA/TCIA open data contains no radiology report text."
+    },
+    {
+      "seq": 3,
+      "day_offset": -30,
+      "date": null,
+      "type": "imaging",
+      "title": "Nuclear medicine study (imaging metadata only)",
+      "content": "Imaging study present for this patient in TCIA collection TCGA-LUSC. 2 series total, modalities NM and CT, series descriptions: 'Perfusion', 'Ventilation'. Series metadata only; no pixel data and no report text distributed with this dataset.",
+      "data_origin": "real",
+      "source": "TCIA NBIA API getSeries, Collection=TCGA-LUSC, PatientID=TCGA-34-8454"
+    },
+    {
+      "seq": 4,
+      "day_offset": 0,
+      "date": null,
+      "type": "pathology",
+      "title": "Biopsy pathology",
+      "content": "Right lower-lobe lung mass, bronchoscopic biopsy. Histologic examination shows squamous cell carcinoma. ICD-O-3 morphology 8070/3, primary site: lower lobe of lung.",
+      "data_origin": "real_derived",
+      "source": "Text assembled verbatim from GDC diagnoses fields primary_diagnosis, morphology, tissue_or_organ_of_origin, laterality"
+    },
+    {
+      "seq": 5,
+      "day_offset": 0,
+      "date": null,
+      "type": "staging",
+      "title": "Pathologic staging descriptors",
+      "content": "Primary tumor: T3. Regional lymph nodes: N1 (positive ipsilateral peribronchial/nodal stations). Distant metastases: M0.",
+      "data_origin": "real",
+      "source": "GDC diagnoses.ajcc_pathologic_t / _n / _m"
+    },
+    {
+      "seq": 6,
+      "day_offset": 0,
+      "date": null,
+      "type": "molecular",
+      "title": "Somatic variant analysis (open access)",
+      "content": "Open-access whole-exome somatic mutation profile available. Called non-silent variants: PIK3CA p.E545Q (missense), TP53 p.H179Y (missense). No non-silent EGFR, KRAS, BRAF, ALK, ROS1, ERBB2, RET or NRAS variants called in this file.",
+      "data_origin": "real",
+      "source": "GDC open Masked Somatic Mutation MAF, file 8adbc731-bf59-499c-85e2-a0ee6af7f5e1"
+    },
+    {
+      "seq": 7,
+      "day_offset": 5,
+      "date": null,
+      "type": "treatment",
+      "title": "Definitive treatment",
+      "content": "Constructed treatment course: concurrent chemotherapy and thoracic radiation delivered with curative intent, completed without dose-limiting toxicity.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation. The GDC case record has an empty treatments block for this case."
+    },
+    {
+      "seq": 8,
+      "day_offset": 166,
+      "date": null,
+      "type": "follow_up",
+      "title": "Surveillance follow-up (day 166)",
+      "content": "Disease response recorded: Tumor Free (TF).",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=166, disease_response=TF-Tumor Free"
+    },
+    {
+      "seq": 9,
+      "day_offset": 827,
+      "date": null,
+      "type": "follow_up",
+      "title": "Surveillance follow-up (day 827)",
+      "content": "Disease response recorded: Tumor Free (TF).",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=827, disease_response=TF-Tumor Free"
+    },
+    {
+      "seq": 10,
+      "day_offset": 1180,
+      "date": null,
+      "type": "follow_up",
+      "title": "Surveillance follow-up (day 1180)",
+      "content": "Disease response recorded: Tumor Free (TF). Two duplicate source records exist for this day; deduplicated here.",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=1180, disease_response=TF-Tumor Free (2 duplicate entries)"
+    },
+    {
+      "seq": 11,
+      "day_offset": 1180,
+      "date": null,
+      "type": "encounter",
+      "title": "Last recorded contact",
+      "content": "Last follow-up recorded at day 1180 (GDC diagnoses.days_to_last_follow_up=1180). Vital status: Alive.",
+      "data_origin": "real",
+      "source": "GDC diagnoses.days_to_last_follow_up=1180, demographic.vital_status=Alive"
+    }
+  ]
+}

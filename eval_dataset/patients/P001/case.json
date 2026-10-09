@@ -1,0 +1,35 @@
+{
+  "patient_id": "P001",
+  "data_origin": "real",
+  "source": {
+    "clinical": "NCI Genomic Data Commons (GDC) case TCGA-J2-A4AE, fetched https://api.gdc.cancer.gov/cases (see sources/gdc/TCGA-J2-A4AE.json)",
+    "molecular": "GDC open-access Masked Somatic Mutation file 07d5681a-c07b-4a25-bfc3-c8b56e36445c",
+    "imaging": "TCIA NBIA API, collection TCGA-LUAD, PatientID TCGA-J2-A4AE (see sources/tcia/TCGA-J2-A4AE_series.json); series metadata only, no pixel data"
+  },
+  "demographics": {
+    "age_at_index_years": 77,
+    "sex_at_birth": "female",
+    "race": "white",
+    "ethnicity": "not hispanic or latino",
+    "origin": "real (GDC demographic block)"
+  },
+  "index_diagnosis": {
+    "site": "Upper lobe, lung (left)",
+    "origin": "real (GDC diagnoses block)"
+  },
+  "modalities_present": [
+    "symptoms",
+    "imaging_metadata",
+    "pathology",
+    "staging",
+    "molecular",
+    "treatment",
+    "longitudinal_follow_up"
+  ],
+  "default_as_of_day": 1079,
+  "agent_must_predict": [
+    "histology_class",
+    "stage_class",
+    "egfr_status"
+  ]
+}

@@ -46,3 +46,4 @@ chroma_db/
 Thumbs.db
 .idea/
 .vscode/
+eval_dataset/build/

@@ -1,0 +1,9 @@
+[
+  { "patient_id": "P001", "histology": "lung adenocarcinoma", "stage": "IA", "egfr": "wildtype" },
+  { "patient_id": "P002", "histology": "squamous cell carcinoma", "stage": "stage iiia", "egfr": "not mutated" },
+  { "patient_id": "P003", "histology": "adenocarcinoma", "stage": "IIIA", "egfr": "mutant" },
+  { "patient_id": "P004", "histology": "lung adenocarcinoma", "stage": "stage iv", "egfr": "EGFR p.L833V present" },
+  { "patient_id": "P005", "histology": "LUAD", "stage": "IB", "egfr": "wild type" },
+  { "patient_id": "P006", "histology": "small cell lung carcinoma", "stage": "extensive stage", "egfr": "not applicable" },
+  { "patient_id": "P007", "histology": "benign granuloma", "stage": "n/a", "egfr": "not applicable" }
+]

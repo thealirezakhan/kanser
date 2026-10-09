@@ -1,0 +1,136 @@
+{
+  "patient_id": "P005",
+  "time_axis": "day_offset relative to index diagnosis (day 0). Absolute calendar dates are not present in the TCGA open-data release and are intentionally omitted. This patient's follow-up spans more than eight years.",
+  "events": [
+    {
+      "seq": 1,
+      "day_offset": -30,
+      "date": null,
+      "type": "symptom",
+      "title": "Initial presentation",
+      "content": "70-year-old evaluated after an abnormal chest radiograph obtained during work-up of unrelated complaints. Smoking history not reported in source data. Asymptomatic from a respiratory standpoint at diagnosis.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation. GDC exposures for this case record tobacco_smoking_status='Not Reported'."
+    },
+    {
+      "seq": 2,
+      "day_offset": -20,
+      "date": null,
+      "type": "imaging",
+      "title": "Respiratory-gated CT (imaging metadata only)",
+      "content": "Imaging study present for this patient in TCIA collection TCGA-LUAD. 5 series total, modality CT, series descriptions include 'INSPIRATION' and 'EXPIRATION'. Series metadata only; no pixel data and no report text are distributed with this dataset.",
+      "data_origin": "real",
+      "source": "TCIA NBIA API getSeries, Collection=TCGA-LUAD, PatientID=TCGA-50-5049"
+    },
+    {
+      "seq": 3,
+      "day_offset": -15,
+      "date": null,
+      "type": "imaging",
+      "title": "Diagnostic CT chest (report text)",
+      "content": "Constructed report: solid nodule in the right upper lobe, no mediastinal adenopathy, no extrathoracic abnormality on performed imaging.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation; TCGA/TCIA open data contains no radiology report text."
+    },
+    {
+      "seq": 4,
+      "day_offset": 0,
+      "date": null,
+      "type": "pathology",
+      "title": "Surgical pathology",
+      "content": "Right upper-lobe lung mass resected. Histologic examination shows adenocarcinoma. ICD-O-3 morphology 8140/3, primary site: upper lobe of lung.",
+      "data_origin": "real_derived",
+      "source": "Text assembled verbatim from GDC diagnoses fields primary_diagnosis, morphology, tissue_or_organ_of_origin, laterality"
+    },
+    {
+      "seq": 5,
+      "day_offset": 0,
+      "date": null,
+      "type": "staging",
+      "title": "Pathologic staging descriptors",
+      "content": "Primary tumor: T2. Regional lymph nodes: N0. Distant metastases: M0.",
+      "data_origin": "real",
+      "source": "GDC diagnoses.ajcc_pathologic_t / _n / _m"
+    },
+    {
+      "seq": 6,
+      "day_offset": 0,
+      "date": null,
+      "type": "molecular",
+      "title": "Somatic variant analysis (open access)",
+      "content": "Open-access whole-exome somatic mutation profile available. Called non-silent variants: RET p.P566T (missense), TP53 p.E298* (nonsense). No non-silent EGFR, KRAS, BRAF, ALK, ROS1, ERBB2, NRAS or PIK3CA variants called in this file.",
+      "data_origin": "real",
+      "source": "GDC open Masked Somatic Mutation MAF, file 3c95d846-6ef5-4810-a389-7444d4873fef"
+    },
+    {
+      "seq": 7,
+      "day_offset": 1,
+      "date": null,
+      "type": "treatment",
+      "title": "Surgical treatment",
+      "content": "Constructed treatment course: anatomical resection of the right upper lobe with lymph-node sampling; no adjuvant therapy recorded. No treatment records exist in the source dataset.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation. The GDC case record has an empty treatments block for this case."
+    },
+    {
+      "seq": 8,
+      "day_offset": 1485,
+      "date": null,
+      "type": "follow_up",
+      "title": "Surveillance follow-up (day 1485)",
+      "content": "Disease response recorded: Tumor Free (TF).",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=1485, disease_response=TF-Tumor Free"
+    },
+    {
+      "seq": 9,
+      "day_offset": 1568,
+      "date": null,
+      "type": "follow_up",
+      "title": "Surveillance follow-up (day 1568)",
+      "content": "Visit recorded with no disease-response value in source data.",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=1568, disease_response empty"
+    },
+    {
+      "seq": 10,
+      "day_offset": 2146,
+      "date": null,
+      "type": "follow_up",
+      "title": "Follow-up (day 2146)",
+      "content": "Disease response recorded: With Tumor (WT). Disease present at this visit, approximately five years and ten months after diagnosis.",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=2146, disease_response=WT-With Tumor"
+    },
+    {
+      "seq": 11,
+      "day_offset": 2544,
+      "date": null,
+      "type": "follow_up",
+      "title": "Follow-up (day 2544)",
+      "content": "Visit recorded with no disease-response value in source data.",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=2544, disease_response empty"
+    },
+    {
+      "seq": 12,
+      "day_offset": 3094,
+      "date": null,
+      "type": "follow_up",
+      "title": "Follow-up (day 3094)",
+      "content": "Disease response recorded: With Tumor (WT). Two duplicate source records exist for this day; deduplicated here.",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=3094, disease_response=WT-With Tumor (2 duplicate entries)"
+    },
+    {
+      "seq": 13,
+      "day_offset": 3094,
+      "date": null,
+      "type": "encounter",
+      "title": "Last recorded contact",
+      "content": "Last recorded follow-up for this patient in the source data. Vital status: Alive. No days-to-death recorded.",
+      "data_origin": "real",
+      "source": "GDC demographic.vital_status=Alive, days_to_death empty"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "patient_id": "P001",
+  "time_axis": "day_offset relative to index diagnosis (day 0). Absolute calendar dates are not present in the TCGA open-data release and are intentionally omitted.",
+  "events": [
+    {
+      "seq": 1,
+      "day_offset": -21,
+      "date": null,
+      "type": "symptom",
+      "title": "Initial presentation",
+      "content": "77-year-old lifelong non-smoker evaluated after an incidental finding in the left lung on imaging obtained for an unrelated complaint. No hemoptysis, no weight loss, no constitutional symptoms reported.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation. TCGA open data contains no clinical notes."
+    },
+    {
+      "seq": 2,
+      "day_offset": -14,
+      "date": null,
+      "type": "imaging",
+      "title": "PET/CT study (imaging metadata only)",
+      "content": "Imaging study present for this patient in TCIA collection TCGA-LUAD. 3 series total, modalities PT and CT, series descriptions: 'AC 2D', 'CT SCOUT HEAD IN', 'CT 3.75 mm'. No image pixels and no radiology report text are distributed with this dataset; only series metadata is available.",
+      "data_origin": "real",
+      "source": "TCIA NBIA API getSeries, Collection=TCGA-LUAD, PatientID=TCGA-J2-A4AE"
+    },
+    {
+      "seq": 3,
+      "day_offset": 0,
+      "date": null,
+      "type": "pathology",
+      "title": "Surgical pathology",
+      "content": "Left upper-lobe lung mass resected. Histologic examination of the specimen shows adenocarcinoma. ICD-O-3 morphology 8140/3, primary site: upper lobe of lung.",
+      "data_origin": "real_derived",
+      "source": "Text assembled verbatim from GDC diagnoses fields primary_diagnosis, morphology, tissue_or_organ_of_origin, laterality"
+    },
+    {
+      "seq": 4,
+      "day_offset": 0,
+      "date": null,
+      "type": "staging",
+      "title": "Pathologic staging descriptors",
+      "content": "Primary tumor: T1a. Regional lymph nodes: N0 (no positive regional nodes). Distant metastases: MX (not assessed or not recorded in source data).",
+      "data_origin": "real",
+      "source": "GDC diagnoses.ajcc_pathologic_t / _n / _m"
+    },
+    {
+      "seq": 5,
+      "day_offset": 0,
+      "date": null,
+      "type": "molecular",
+      "title": "Somatic variant analysis (open access)",
+      "content": "Open-access whole-exome somatic mutation profile available. Called non-silent variants: MET frame-shift deletion (HGVSp not reported in MAF), RB1 p.M148Vfs*8 (frame-shift deletion), RB1 p.E237Dfs*27 (frame-shift deletion). No non-silent EGFR, KRAS, BRAF, TP53, ALK, ROS1, ERBB2, RET, NRAS or PIK3CA variants called in this file.",
+      "data_origin": "real",
+      "source": "GDC open Masked Somatic Mutation MAF, file 07d5681a-c07b-4a25-bfc3-c8b56e36445c"
+    },
+    {
+      "seq": 6,
+      "day_offset": 1,
+      "date": null,
+      "type": "treatment",
+      "title": "Surgical treatment",
+      "content": "Anatomical resection of the left upper lobe with mediastinal lymph-node sampling performed; postoperative recovery uncomplicated. No adjuvant therapy recorded.",
+      "data_origin": "synthetic",
+      "source": "Constructed for evaluation. The GDC case record has an empty treatments block for this case."
+    },
+    {
+      "seq": 7,
+      "day_offset": 282,
+      "date": null,
+      "type": "follow_up",
+      "title": "Surveillance follow-up (day 282)",
+      "content": "Disease response recorded: Tumor Free (TF).",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=282, disease_response=TF-Tumor Free"
+    },
+    {
+      "seq": 8,
+      "day_offset": 671,
+      "date": null,
+      "type": "follow_up",
+      "title": "Surveillance follow-up (day 671)",
+      "content": "Disease response recorded: Tumor Free (TF).",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=671, disease_response=TF-Tumor Free"
+    },
+    {
+      "seq": 9,
+      "day_offset": 1079,
+      "date": null,
+      "type": "follow_up",
+      "title": "Surveillance follow-up (day 1079)",
+      "content": "Disease response recorded: Tumor Free (TF). Two duplicate source records exist for this day; deduplicated here.",
+      "data_origin": "real",
+      "source": "GDC follow_ups.days_to_follow_up=1079, disease_response=TF-Tumor Free (2 duplicate entries)"
+    },
+    {
+      "seq": 10,
+      "day_offset": 1079,
+      "date": null,
+      "type": "encounter",
+      "title": "Last recorded contact",
+      "content": "Last recorded follow-up for this patient in the source data. Vital status: Alive. No days-to-death recorded.",
+      "data_origin": "real",
+      "source": "GDC demographic.vital_status=Alive, days_to_death empty"
+    }
+  ]
+}
